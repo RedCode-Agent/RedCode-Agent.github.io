@@ -152,8 +152,9 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
-          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+          Our experiment reveals that OCI agents is safer than ReAct and CodeAct agents.
+          <br>
+          [the ASR-REJ figure here]
         </h2>
       </div>
     </div>
@@ -168,11 +169,21 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus.
-              Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a
-              vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac
-              gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed
-              vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+              With the rapidly increasing capabilities and adoption of code agents for AI-assisted coding and software development, safety and security concerns - such as generating or executing malicious code - have become significant barriers to the real-world deployment of these agents. To provide comprehensive and practical evaluations on the safety of code agents, we propose RedCode,
+              an evaluation platform with benchmarks grounded in four key principles - real interaction with systems, holistic evaluation of unsafe code generation and execution, diverse input formats, and high-quality safety scenarios and tests.
+              RedCode consists of two parts to evaluate agents' safety in unsafe code execution and generation:
+              <b>
+              (1) RedCode-Exec provides challenging code prompts in Python as inputs, aiming to evaluate code agents' ability to recognize and handle unsafe code. We then map the Python code to other programming languages (e.g., Bash) and natural text summaries or descriptions for evaluation, leading to a total of over 4,000 testing instances.
+              </b>
+              We provide 25 types of critical vulnerabilities spanning various domains, such as websites, file systems, and operating systems. 
+              We provide a Docker sandbox environment to evaluate the execution capabilities of code agents and design corresponding evaluation metrics to assess their execution results.
+              <b>
+              (2) RedCode-Gen provides 160 prompts with function signatures as input to assess whether code agents will follow instructions to generate harmful code or software.
+              </b>
+              Our empirical findings, derived from evaluating three agents based on various LLMs, provide insights into code agents' vulnerabilities. For instance,  evaluations on RedCode-Exec show that agents are more likely to reject executing unsafe operations on operating system. Unsafe operations described in natural text lead to a lower rejection rate than those in code format. 
+              Additionally,  evaluations on RedCode-Gen reveal that 
+              more capable base models and agents with stronger overall coding abilities, such as GPT-4, tend to produce more sophisticated and effective harmful software.
+              Our findings highlight the need for stringent safety evaluations for diverse code agents. 
             </p>
           </div>
         </div>
