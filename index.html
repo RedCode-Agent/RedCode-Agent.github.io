@@ -26,7 +26,7 @@
 
 
   <title>RedCode: Multi-Dimensional Safety Benchmark for Code Agents</title>
-  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="assets/RedCode-logo-1024.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -52,26 +52,26 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">RedCode: Multi-Dimensional Safety Benchmark for Code Agents</h1>
+            <h1 class="title is-1 publication-title"><img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="50px"> RedCode: Multi-Dimensional Safety Benchmark for Code Agents</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="" target="_blank">Chengquan Guo</a><sup>1*</sup>,</span>
+                <a href="https://github.com/1mocat" target="_blank">Chengquan Guo</a><sup>1*</sup>,</span>
               <span class="author-block">
-                <a href="" target="_blank">Xun Liu</a><sup>2*</sup>,</span>
+                <a href="https://antiquality.github.io" target="_blank">Xun Liu</a><sup>2*</sup>,</span>
               <span class="author-block">
-                <a href="" target="_blank">Chulin Xie</a><sup>3*</sup>,</span>
-              <span class="author-block">
-                <a href="" target="_blank">Andy Zhou</a><sup>3,4</sup>,</span>
+                <a href="https://alphapav.github.io" target="_blank">Chulin Xie</a><sup>3*</sup>,</span>
               <br>
               <span class="author-block">
-                <a href="" target="_blank">Yi Zeng</a><sup>5</sup>,</span>
+                <a href="https://www.andyzhou.ai" target="_blank">Andy Zhou</a><sup>3,4</sup>,</span>
               <span class="author-block">
-                <a href="" target="_blank">Zinan Lin</a><sup>6</sup>,</span>
+                <a href="https://www.yi-zeng.com" target="_blank">Yi Zeng</a><sup>5</sup>,</span>
               <span class="author-block">
-                <a href="" target="_blank">Dawn Song</a><sup>7</sup>,</span>
+                <a href="https://zinanlin.me" target="_blank">Zinan Lin</a><sup>6</sup>,</span>
               <span class="author-block">
-                <a href="" target="_blank">Bo Li</a><sup>3,8</sup>
+                <a href="https://dawnsong.io" target="_blank">Dawn Song</a><sup>7</sup>,</span>
+              <span class="author-block">
+                <a href="https://aisecure.github.io" target="_blank">Bo Li</a><sup>3,8</sup>
               </span>
             </div>
 
@@ -80,14 +80,14 @@
                 <small>
                   <sup>1</sup>Zhejiang University
                   <sup>2</sup>University of Chinese Academy of Sciences
+                  <sup>3</sup>UIUC
                   <br>
-                  <sup>3</sup>University of Illinois Urbana-Champaign
                   <sup>4</sup>Lapis Labs
                   <sup>5</sup>Virginia Tech
-                  <br>
                   <sup>6</sup>Microsoft Corporation
                   <sup>7</sup>UC Berkeley
                   <sup>8</sup>University of Chicago
+                  <!-- <br> -->
                 </small>
               </span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
@@ -103,17 +103,6 @@
                       <i class="fas fa-file-pdf"></i>
                     </span>
                     <span>Paper</span>
-                  </a>
-                </span>
-
-                <!-- Supplementary PDF link -->
-                <span class="link-block">
-                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Supplementary</span>
                   </a>
                 </span>
 
@@ -138,6 +127,8 @@
                     <span>arXiv</span>
                   </a>
                 </span>
+
+                <p style="color: red;"> TODO: Add the HF dataset link here. </p>
               </div>
             </div>
           </div>
@@ -152,10 +143,15 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          Our experiment reveals that OCI agents is safer than ReAct and CodeAct agents.
+          <p style="color: red;"> TODO: Maybe a short intro of motivation - Why and what are we going to evaluate? </p>
           <br>
-          [the ASR-REJ figure here]
+          Our experiment reveals that Code Agents are
+          <br>
+          <b>more vulnerable to risky queries in Natural Language (NL) inputs.</b>
+          <br>
+          <p style="color: red;"> TODO: Further art refinement of this scatter. </p>
         </h2>
+        <img src="assets/scatter_REJ_ASR_web.jpg" alt="Scatter of REJ-ASR." />
       </div>
     </div>
   </section>
@@ -169,6 +165,8 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
+              <p style="color: red;"> TODO: Cut off the length or add a TL;DR? </p>
+              <br>
               With the rapidly increasing capabilities and adoption of code agents for AI-assisted coding and software development, safety and security concerns - such as generating or executing malicious code - have become significant barriers to the real-world deployment of these agents. To provide comprehensive and practical evaluations on the safety of code agents, we propose RedCode,
               an evaluation platform with benchmarks grounded in four key principles - real interaction with systems, holistic evaluation of unsafe code generation and execution, diverse input formats, and high-quality safety scenarios and tests.
               RedCode consists of two parts to evaluate agents' safety in unsafe code execution and generation:
@@ -193,6 +191,81 @@
   <!-- End paper abstract -->
 
 
+  <!-- Benchmark overview -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Benchmark Overview</h2>
+          <div class="content has-text-justified">
+            <p>
+              <p style="color: red;"> TODO: Use other font formats to highlight the 'RedCode' name. </p>
+              The RedCode-Exec component is designed to assess risks associated with code execution, while RedCode-Gen component evaluates risks in software generation.
+              <br>
+              <img src="assets/dataset-pipeline-new-5.jpg" alt="Scatter of REJ-ASR." />
+              <br>
+              <p style="color: red;"> TODO: RedCode-Exec taxonomy. </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Benchmark overview -->
+
+  <!-- Leaderboard -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Leaderboard</h2>
+          <div class="content has-text-justified">
+            <p>
+              The results of OCI, ReAct and CodeAct on RedCode-Exec and RedCode-Gen are shown in the following tables.
+              <p style="color: red;"> TODO: Leaderboard here. </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Leaderboard -->
+
+  <!-- Main results -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Main results</h2>
+          <div class="content has-text-justified">
+            <p>
+              <p style="color: red;"> TODO: Show the headmap and radar figures here.</p>
+              The heatmap and radar figures show the performance of the three agents on RedCode-Exec; a table of RedCode-Gen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Main results -->
+
+  <!-- Case study -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Case study</h2>
+          <div class="content has-text-justified">
+            <p>
+              <p style="color: red;"> TODO: The runtime logs to show case studies. </p>
+              The runtime logs of the three agents on RedCode-Exec are shown in the following blocks to provide examples.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Case study -->
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
