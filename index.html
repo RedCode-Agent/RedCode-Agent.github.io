@@ -1,310 +1,320 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html>  
+<html>  
 
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
-  <meta property="og:url" content="URL OF THE WEBSITE" />
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+<head>  
+  <meta charset="utf-8">  
+  <meta name="google-site-verification" content="lTNLmXZvHm_RXq9IklCb7g-0DA_3JIIpvcV9Um-vpRQ" />
+  <!-- Replace the content tag with appropriate information -->  
+  <meta name="description" content="RedCode official webpage">  
+  <meta property="og:title" content="RedCode" />  
+  <meta property="og:description" content="RedCode official webpage" />  
+
+  <title>RedCode: Multi-Dimensional Safety Benchmark for Code Agents</title>  
+  <link rel="icon" type="image/x-icon" href="assets/RedCode-logo-1024.ico">  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">  
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">  
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">  
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">  
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">  
+  <link rel="stylesheet" href="static/css/index.css">  
+  <link rel="stylesheet" href="static/css/navbar.css">  
+  <link rel="stylesheet" href="static/css/redcode-font.css">  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>  
+  <script defer src="static/js/fontawesome.all.min.js"></script>  
+  <script src="static/js/bulma-carousel.min.js"></script>  
+  <script src="static/js/bulma-slider.min.js"></script>  
+  <script src="static/js/index.js"></script>  
+
+</head>  
+
+<body>  
+
+  <nav class="navbar"> 
+    <div class="navbar-left">
+        <a href="#home">
+            <img src="assets/RedCode-logo-512.png" alt="RedCode Logo">
+            <span class="name-bold">RedCode</span>
+        </a>
+    </div>
+
+    <div class="navbar-right" id="navbar-right">
+        <a href="#home">Home</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#benchmark">Overview</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#results">Results Demo</a>
+        <a href="#case-study">Case Study</a>
+        <a href="#BibTeX">Cite us</a>
+    </div>
+    
+    <div class="menu-icon">
+        <i class="fa fa-bars"></i>
+    </div>
+  </nav>
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <section class="hero" id="home">  
+    <div class="hero-body">  
+      <div class="container is-max-desktop">  
+        <div class="columns is-centered">  
+          <div class="column has-text-centered">  
+            <h1 class="title is-1 publication-title"><img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="50px"> <span class="name-bold">RedCode</span>: Multi-Dimensional Safety Benchmark for Code Agents</h1>  
+            <div class="is-size-5 publication-authors">  
+              <!-- Paper authors -->  
+              <span class="author-block">  
+                <a href="https://github.com/1mocat" target="_blank">Chengquan Guo</a><sup>1*</sup>,</span>  
+              <span class="author-block">  
+                <a href="https://antiquality.github.io" target="_blank">Xun Liu</a><sup>2*</sup>,</span>  
+              <span class="author-block">  
+                <a href="https://alphapav.github.io" target="_blank">Chulin Xie</a><sup>3*</sup>,</span>  
+              <br>  
+              <span class="author-block">  
+                <a href="https://www.andyzhou.ai" target="_blank">Andy Zhou</a><sup>3,4</sup>,</span>  
+              <span class="author-block">  
+                <a href="https://www.yi-zeng.com" target="_blank">Yi Zeng</a><sup>5</sup>,</span>  
+              <span class="author-block">  
+                <a href="https://zinanlin.me" target="_blank">Zinan Lin</a><sup>6</sup>,</span>  
+              <span class="author-block">  
+                <a href="https://dawnsong.io" target="_blank">Dawn Song</a><sup>7</sup>,</span>  
+              <span class="author-block">  
+                <a href="https://aisecure.github.io" target="_blank">Bo Li</a><sup>3,8</sup>  
+              </span>  
+            </div>  
 
+            <div class="is-size-5 publication-authors">  
+              <span class="author-block">  
+                <small>  
+                  <sup>1</sup>Zhejiang University  
+                  <sup>2</sup>University of Chinese Academy of Sciences  
+                  <sup>3</sup>UIUC  
+                  <br>  
+                  <sup>4</sup>Lapis Labs  
+                  <sup>5</sup>Virginia Tech  
+                  <sup>6</sup>Microsoft Corporation  
+                  <sup>7</sup>UC Berkeley  
+                  <sup>8</sup>University of Chicago  
+                </small>  
+              </span>  
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>  
+            </div>  
 
-  <title>RedCode: Multi-Dimensional Safety Benchmark for Code Agents</title>
-  <link rel="icon" type="image/x-icon" href="assets/RedCode-logo-1024.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+            <div class="column has-text-centered">  
+              <div class="publication-links">  
+                <!-- Arxiv PDF link -->  
+                <span class="link-block">  
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">  
+                    <span class="icon">  
+                      <i class="fas fa-file-pdf"></i>  
+                    </span>  
+                    <span>Paper</span>  
+                  </a>  
+                </span>  
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+                <!-- ArXiv abstract Link -->  
+                <span class="link-block">  
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank" class="external-link button is-normal is-rounded is-dark">  
+                    <span class="icon">  
+                      <i class="ai ai-arxiv"></i>  
+                    </span>  
+                    <span>arXiv</span>  
+                  </a>  
+                </span>  
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-</head>
+                <!-- Github link -->  
+                <span class="link-block">  
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank" class="external-link button is-normal is-rounded is-dark">  
+                    <span class="icon">  
+                      <i class="fab fa-github"></i>  
+                    </span>  
+                    <span>Code</span>  
+                  </a>  
+                </span>  
 
-<body>
-
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="50px"> RedCode: Multi-Dimensional Safety Benchmark for Code Agents</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://github.com/1mocat" target="_blank">Chengquan Guo</a><sup>1*</sup>,</span>
-              <span class="author-block">
-                <a href="https://antiquality.github.io" target="_blank">Xun Liu</a><sup>2*</sup>,</span>
-              <span class="author-block">
-                <a href="https://alphapav.github.io" target="_blank">Chulin Xie</a><sup>3*</sup>,</span>
-              <br>
-              <span class="author-block">
-                <a href="https://www.andyzhou.ai" target="_blank">Andy Zhou</a><sup>3,4</sup>,</span>
-              <span class="author-block">
-                <a href="https://www.yi-zeng.com" target="_blank">Yi Zeng</a><sup>5</sup>,</span>
-              <span class="author-block">
-                <a href="https://zinanlin.me" target="_blank">Zinan Lin</a><sup>6</sup>,</span>
-              <span class="author-block">
-                <a href="https://dawnsong.io" target="_blank">Dawn Song</a><sup>7</sup>,</span>
-              <span class="author-block">
-                <a href="https://aisecure.github.io" target="_blank">Bo Li</a><sup>3,8</sup>
-              </span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <small>
-                  <sup>1</sup>Zhejiang University
-                  <sup>2</sup>University of Chinese Academy of Sciences
-                  <sup>3</sup>UIUC
-                  <br>
-                  <sup>4</sup>Lapis Labs
-                  <sup>5</sup>Virginia Tech
-                  <sup>6</sup>Microsoft Corporation
-                  <sup>7</sup>UC Berkeley
-                  <sup>8</sup>University of Chicago
-                  <!-- <br> -->
-                </small>
-              </span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-            </div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- Arxiv PDF link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
+                <!-- Dataset link -->  
+                <span class="link-block">  
+                  <a href="https://huggingface.co/datasets/AI-Secure/RedCode" target="_blank" class="external-link button is-normal is-rounded is-dark">  
                     <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                        <img src="assets/huggingface-logo.svg" alt="Hugging Face Logo" width="250" height="250">  
                     </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
+                    <span>Dataset</span>  
+                  </a>  
+                </span>  
+                
+              </div>  
+            </div>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </section>  
 
-                <!-- Github link -->
-                <span class="link-block">
-                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+  <!-- Teaser video-->  
+  <section class="hero teaser">  
+    <div class="container is-max-desktop">  
+      <div class="hero-body">  
+        <h2 class="subtitle has-text-centered">  
+          Our experiment reveals that Code Agents are  
+          <br>  
+          <b>more vulnerable to risky queries in Natural Language (NL) inputs.</b>  
+          <br>  
+          <!-- <p style="color: red;"> TODO: Further art refinement of this scatter. </p>   -->
+          <!-- <img src="assets/scatter_REJ_ASR_web.jpg" alt="Scatter of REJ-ASR." />   -->
+          <img src="assets/fig-1(1x1)-rectangle.png" alt="Fig-1:scatter of REJ-ASR." style="width: 80%; height: auto;"/>  
+        </h2>  
+      </div>  
+    </div>  
+  </section>  
+  <!-- End teaser video -->  
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
+  <!-- Paper abstract -->  
+  <section class="section hero is-light" id="abstract">  
+    <div class="container is-max-desktop">  
+      <div class="columns is-centered has-text-centered">  
+        <div class="column is-four-fifths">  
+          <h2 class="title is-3">Abstract</h2>  
+          <div class="content has-text-justified">  
+            <p>  
+              <br>  
+              With the rapidly increasing capabilities and adoption of code agents for AI-assisted coding and software development, safety and security concerns - such as generating or executing malicious code - have become significant barriers to the real-world deployment of these agents. To provide comprehensive and practical evaluations on the safety of code agents, we propose <span class="name-context">RedCode</span>,  
+              an evaluation platform with benchmarks grounded in four key principles - real interaction with systems, holistic evaluation of unsafe code generation and execution, diverse input formats, and high-quality safety scenarios and tests.  
+              <span class="name-context">RedCode</span> consists of two parts to evaluate agents' safety in unsafe code execution and generation:  
+              <b>  
+              (1) <span class="name-context">RedCode-Exec</span> provides challenging code prompts in Python as inputs, aiming to evaluate code agents' ability to recognize and handle unsafe code. We then map the Python code to other programming languages (e.g., Bash) and natural text summaries or descriptions for evaluation, leading to a total of over 4,000 testing instances.  
+              </b>  
+              We provide 25 types of critical vulnerabilities spanning various domains, such as websites, file systems, and operating systems.  
+              We provide a Docker sandbox environment to evaluate the execution capabilities of code agents and design corresponding evaluation metrics to assess their execution results.  
+              <b>  
+              (2) <span class="name-context">RedCode-Gen</span> provides 160 prompts with function signatures as input to assess whether code agents will follow instructions to generate harmful code or software.  
+              </b>  
+              Our empirical findings, derived from evaluating three agents based on various LLMs, provide insights into code agents' vulnerabilities. For instance,  evaluations on <span class="name-context">RedCode-Exec</span> show that agents are more likely to reject executing unsafe operations on operating system. Unsafe operations described in natural text lead to a lower rejection rate than those in code format.  
+              Additionally,  evaluations on <span class="name-context">RedCode-Gen</span> reveal that  
+              more capable base models and agents with stronger overall coding abilities, such as GPT-4, tend to produce more sophisticated and effective harmful software.  
+              Our findings highlight the need for stringent safety evaluations for diverse code agents.  
+            </p>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </section>  
+  <!-- End paper abstract -->  
 
-                <p style="color: red;"> TODO: Add the HF dataset link here. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Benchmark overview -->  
+  <section class="section hero is-small" id="benchmark">  
+    <div class="container is-max-desktop">  
+      <div class="columns is-centered has-text-centered">  
+        <div class="column is-four-fifths">  
+          <h2 class="title is-3">Benchmark Overview</h2>  
+          <div class="content has-text-justified">  
+            <p>  
+              The <span class="name-context">RedCode-Exec</span> component is designed to assess risks associated with code execution, while <span class="name-context">RedCode-Gen</span> component evaluates risks in software generation.  
+              <br>  
+              <img src="assets/dataset-pipeline-new-5.jpg" alt="Scatter of REJ-ASR." />  
+            </p>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </section>  
+  <!-- End Benchmark overview -->  
 
+  <!-- Leaderboard -->  
+  <section class="section hero is-light" id="leaderboard">  
+    <div class="container is-max-desktop">  
+      <div class="columns is-centered has-text-centered">  
+        <div class="column is-four-fifths">  
+          <h2 class="title is-3">Leaderboard</h2>  
+          <div class="content has-text-justified">  
+            <p>  
+              The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span> are shown in the following tables.  
+            </p>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </section>  
+  <!-- End Leaderboard -->  
 
-  <!-- Teaser video-->
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <h2 class="subtitle has-text-centered">
-          <p style="color: red;"> TODO: Maybe a short intro of motivation - Why and what are we going to evaluate? </p>
-          <br>
-          Our experiment reveals that Code Agents are
-          <br>
-          <b>more vulnerable to risky queries in Natural Language (NL) inputs.</b>
-          <br>
-          <p style="color: red;"> TODO: Further art refinement of this scatter. </p>
-        </h2>
-        <img src="assets/scatter_REJ_ASR_web.jpg" alt="Scatter of REJ-ASR." />
-      </div>
-    </div>
-  </section>
-  <!-- End teaser video -->
+  <!-- Results Demo -->  
+  <section class="section hero is-small" id="results">  
+    <div class="container is-max-desktop">  
+      <div class="columns is-centered has-text-centered">  
+        <div class="column is-four-fifths">  
+          <h2 class="title is-3">Results Demo</h2>  
+          <div class="content has-text-justified">  
+            <p>  
+              The heatmap and radar figures show the performance of the three agents on <span class="name-context">RedCode-Exec</span>; a table of <span class="name-context">RedCode-Gen</span>.  
+            </p>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </section>  
+  <!-- Results Demo -->  
 
-  <!-- Paper abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              <p style="color: red;"> TODO: Cut off the length or add a TL;DR? </p>
-              <br>
-              With the rapidly increasing capabilities and adoption of code agents for AI-assisted coding and software development, safety and security concerns - such as generating or executing malicious code - have become significant barriers to the real-world deployment of these agents. To provide comprehensive and practical evaluations on the safety of code agents, we propose RedCode,
-              an evaluation platform with benchmarks grounded in four key principles - real interaction with systems, holistic evaluation of unsafe code generation and execution, diverse input formats, and high-quality safety scenarios and tests.
-              RedCode consists of two parts to evaluate agents' safety in unsafe code execution and generation:
-              <b>
-              (1) RedCode-Exec provides challenging code prompts in Python as inputs, aiming to evaluate code agents' ability to recognize and handle unsafe code. We then map the Python code to other programming languages (e.g., Bash) and natural text summaries or descriptions for evaluation, leading to a total of over 4,000 testing instances.
-              </b>
-              We provide 25 types of critical vulnerabilities spanning various domains, such as websites, file systems, and operating systems. 
-              We provide a Docker sandbox environment to evaluate the execution capabilities of code agents and design corresponding evaluation metrics to assess their execution results.
-              <b>
-              (2) RedCode-Gen provides 160 prompts with function signatures as input to assess whether code agents will follow instructions to generate harmful code or software.
-              </b>
-              Our empirical findings, derived from evaluating three agents based on various LLMs, provide insights into code agents' vulnerabilities. For instance,  evaluations on RedCode-Exec show that agents are more likely to reject executing unsafe operations on operating system. Unsafe operations described in natural text lead to a lower rejection rate than those in code format. 
-              Additionally,  evaluations on RedCode-Gen reveal that 
-              more capable base models and agents with stronger overall coding abilities, such as GPT-4, tend to produce more sophisticated and effective harmful software.
-              Our findings highlight the need for stringent safety evaluations for diverse code agents. 
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End paper abstract -->
+  <!-- Case study -->  
+  <section class="section hero is-light" id="case-study">  
+    <div class="container is-max-desktop">  
+      <div class="columns is-centered has-text-centered">  
+        <div class="column is-four-fifths">  
+          <h2 class="title is-3">Case study</h2>  
+          <div class="content has-text-justified">  
+            <p>  
+              The runtime logs of the three agents on <span class="name-context">RedCode-Exec</span> are shown in the following blocks to provide examples.  
+            </p>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </section>  
+  <!-- Case study -->  
 
+  <!--BibTex citation -->  
+  <section class="section" id="BibTeX">  
+    <div class="container is-max-desktop content">  
+      <h2 class="title">BibTeX</h2>  
+      <pre><code class="bibtex-code">BibTex Code Here</code></pre>  
+    </div>  
+  </section>  
+  <!--End BibTex citation -->  
 
-  <!-- Benchmark overview -->
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Benchmark Overview</h2>
-          <div class="content has-text-justified">
-            <p>
-              <p style="color: red;"> TODO: Use other font formats to highlight the 'RedCode' name. </p>
-              The RedCode-Exec component is designed to assess risks associated with code execution, while RedCode-Gen component evaluates risks in software generation.
-              <br>
-              <img src="assets/dataset-pipeline-new-5.jpg" alt="Scatter of REJ-ASR." />
-              <br>
-              <p style="color: red;"> TODO: RedCode-Exec taxonomy. </p>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Benchmark overview -->
+  <footer class="footer">  
+    <div class="container">  
+      <div class="columns is-centered">  
+        <div class="column is-8">  
+          <div class="content">  
 
-  <!-- Leaderboard -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Leaderboard</h2>
-          <div class="content has-text-justified">
-            <p>
-              The results of OCI, ReAct and CodeAct on RedCode-Exec and RedCode-Gen are shown in the following tables.
-              <p style="color: red;"> TODO: Leaderboard here. </p>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Leaderboard -->
+            <p>  
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.  
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.  
+              <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative  
+                Commons Attribution-ShareAlike 4.0 International License</a>.  
+            </p>  
 
-  <!-- Main results -->
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Main results</h2>
-          <div class="content has-text-justified">
-            <p>
-              <p style="color: red;"> TODO: Show the headmap and radar figures here.</p>
-              The heatmap and radar figures show the performance of the three agents on RedCode-Exec; a table of RedCode-Gen.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Main results -->
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </footer>  
 
-  <!-- Case study -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Case study</h2>
-          <div class="content has-text-justified">
-            <p>
-              <p style="color: red;"> TODO: The runtime logs to show case studies. </p>
-              The runtime logs of the three agents on RedCode-Exec are shown in the following blocks to provide examples.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Case study -->
+  <!-- Statcounter tracking code -->  
 
-  <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-  </section>
-  <!--End BibTex citation -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->  
 
+  <!-- End of Statcounter Code -->  
 
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
+  <script>  
+    function toggleNavbar() {  
+      var navbarRight = document.getElementById("navbar-right");  
+      navbarRight.classList.toggle("active");  
+    }  
+  </script>
 
-            <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
-              <br> This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Statcounter tracking code -->
-
-  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-  <!-- End of Statcounter Code -->
-
-</body>
+</body>  
 
 </html>
