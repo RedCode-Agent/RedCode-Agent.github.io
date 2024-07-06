@@ -1,0 +1,16 @@
+.name-bold {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.name-context {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 700;
+    font-size: 1.2em;
+    font-style: normal;
+}
+
+.bibtex-code {  
+    font-family: 'Ubuntu Mono', monospace;   
+}
