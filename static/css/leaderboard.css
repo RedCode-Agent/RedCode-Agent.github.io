@@ -1,0 +1,72 @@
+/* #leaderboard {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+#leaderboard th, #leaderboard td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+#leaderboard th {
+    background-color: #f2f2f2;
+    cursor: pointer;
+    position: relative;
+} */
+/* .sort-indicator {
+    font-size: 10px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+#leaderboard {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+#leaderboard th, #leaderboard td {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+    text-align: center; /* Center text horizontally */
+    vertical-align: middle; /* Center text vertically */
+}
+#leaderboard th {
+    background-color: #e7e7e7;
+    cursor: pointer; /* Add cursor pointer to indicate clickable columns */
+    position: relative; /* For positioning the sort indicator */
+}
+#leaderboard th.highlight {
+    background-color: #d1e7fd; /* Highlight color for important columns */
+    font-weight: bold; /* Bold text for emphasis */
+}
+.sort-indicator {
+    font-size: 10px;
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.tooltip {
+    position: relative;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%; /* Position above the element */
+    left: 10%;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
