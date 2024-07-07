@@ -94,7 +94,7 @@
                 <small>  
                   <sup>1</sup>Zhejiang University  
                   <sup>2</sup>University of Chinese Academy of Sciences  
-                  <sup>3</sup>UIUC  
+                  <sup>3</sup>UIUC
                   <br>  
                   <sup>4</sup>Lapis Labs  
                   <sup>5</sup>Virginia Tech  
@@ -106,7 +106,10 @@
               <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>  
             </div>  
 
+            <p style="color: red;"> TODO: Alternate the affiliation.</p>  
+
             <p style="color: red;"> TODO: Fill out the link in Paper and arXiv block. </p>  
+            <p style="color: red;"> TODO: Add a leaderboard caption with appropriate logo. </p>  
 
             <div class="column has-text-centered">  
               <div class="publication-links">  
@@ -121,14 +124,14 @@
                 </span>  
 
                 <!-- ArXiv abstract Link -->  
-                <span class="link-block">  
+                <!-- <span class="link-block">  
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank" class="external-link button is-normal is-rounded is-dark">  
                     <span class="icon">  
                       <i class="ai ai-arxiv"></i>  
                     </span>  
                     <span>arXiv</span>  
                   </a>  
-                </span>  
+                </span>   -->
 
                 <!-- Github link -->  
                 <span class="link-block">  
@@ -139,6 +142,16 @@
                     <span>Code</span>  
                   </a>  
                 </span>  
+
+                <!-- Leaderboard link -->
+                <span class="link-block">  
+                  <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">  
+                    <span class="icon">
+                      <i class="fab fa-chalkboard"></i>  
+                    </span>
+                    <span>Leaderboard</span>  
+                  </a>  
+                </span> 
 
                 <!-- Dataset link -->  
                 <span class="link-block">  
@@ -237,6 +250,28 @@
                 <span class="name-context">RedCode</span> consists of two parts to evaluate agents' safety in unsafe code execution and
                 generation: <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span>.
               </p>
+
+              <img src="assets/25-category.jpg" alt="Taxonomy of RedCode-Exec."/>
+              <br>
+              <div class="columns is-centered has-text-centered">
+                <p style="color: gray;">
+                  Taxonomy of 25 risky scenarios spanning 8 domains in <span class="name-context">RedCode-Exec</span>, ranging from real system, network operations to program logic and so on.
+                </p>
+              </div>
+
+              <p>
+                For <span class="name-context">RedCode-Exec</span>, we begin by collecting the risky scenarios from the existing benchmarks and CWE. Guided by these risky
+                scenarios and risky descriptions, we construct initial seed test cases (python code snippets) by manually designing
+                the code or gathering from online sources. Next, we employ a human-in-the-loop procedure to expand and refine our dataset.
+                <p style="color: red;"> TODO: Add some descriptions of the taxonomy.</p>  
+                <br>
+                <br>
+                For <span class="name-context">RedCode-Gen</span>, we provide eight risky categories based on well-studied malware families for risky software generation.
+                The prompts are generated with human-in-the-loop AI-assisted generation. We then give the prompts to the agent to
+                generate code in our docker environment. We evaluate the quality of the generated code via both LLM-as-a-judge and
+                VirusTotal API.
+              </p>
+
               <img src="assets/dataset-pipeline-new-5.jpg" alt="Scatter of REJ-ASR." style="margin-bottom: 10px;"/>
               <br>
               <div class="columns is-centered has-text-centered">
@@ -246,24 +281,7 @@
                   execution, while <span class="name-context">RedCode-Gen</span> component evaluates risks in software generation.
                 </p>
               </div>
-              <p>
-                For <span class="name-context">RedCode-Exec</span>, we begin by collecting the risky scenarios from the existing benchmarks and CWE. Guided by these risky
-                scenarios and risky descriptions, we construct initial seed test cases (python code snippets) by manually designing
-                the code or gathering from online sources. Next, we employ a human-in-the-loop procedure to expand and refine our dataset.
-                <br>
-                <br>
-                For <span class="name-context">RedCode-Gen</span>, we provide eight risky categories based on well-studied malware families for risky software generation.
-                The prompts are generated with human-in-the-loop AI-assisted generation. We then give the prompts to the agent to
-                generate code in our docker environment. We evaluate the quality of the generated code via both LLM-as-a-judge and
-                VirusTotal API.
-              </p>
-              <img src="assets/25-category.jpg" alt="Taxonomy of RedCode-Exec."/>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <p style="color: gray;">
-                  Taxonomy of 25 risky scenarios spanning 8 domains in <span class="name-context">RedCode-Exec</span>, ranging from real system, network operations to program logic and so on.
-                </p>
-              </div>
+
             </p>
           </div>  
         </div>  
@@ -280,7 +298,7 @@
           <h2 class="title is-3">Leaderboard</h2>  
           <div class="content has-text-justified">  
             <p>  
-              The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span> are shown in the following tables. <span style="color: red;"> TODO: Should the RedCode-Gen results be put in this section or in the Results Demo section? </span>  
+              The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span> are shown in the following tables. <span style="color: red;"> TODO: Add RedCode-Gen results here. </span>  
             </p>  
 
             <table id="leaderboard-exec">
@@ -325,7 +343,6 @@
           <h2 class="title is-3">Results Demo</h2>  
           <div class="content has-text-justified">  
             <p>  
-              <p style="color: red;"> TODO: Should the RedCode-Gen results be put in this section or in the Leaderboard section?</p>  
               <p>
                 The heatmap and radar figures show the performance of the three agents on <span class="name-context">RedCode-Exec</span> benchmark.
               </p>
@@ -339,6 +356,8 @@
                   achieve a higher rejection rate on risky cases in operation and file systems than those in other domains.
                 </p>
               </div>
+
+              <p style="color: red;"> TODO: More analysis for the results figures.</p>  
 
               <img src="assets/heatmap.jpg" alt="Heatmap of RedCode-Exec."/>
               <div class="columns is-centered has-text-centered">
