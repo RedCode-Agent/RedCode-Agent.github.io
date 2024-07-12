@@ -265,15 +265,16 @@
                 VirusTotal API.
               </p>
 
-              <img src="assets/dataset-pipeline-new-5.jpg" alt="Scatter of REJ-ASR." style="margin-bottom: 10px;"/>
+              <img src="assets/dataset-pipeline-new-6.jpg" alt="Scatter of REJ-ASR." style="margin-bottom: 10px;"/>
               <br>
               <div class="columns is-centered has-text-centered">
                 <p style="color: gray;">
                   Overview of <span class="name-context">RedCode</span> benchmark.
-                  The <span class="name-context">RedCode-Exec</span> component is designed to assess risks associated with code
-                  execution, while <span class="name-context">RedCode-Gen</span> component evaluates risks in software generation.
                 </p>
               </div>
+
+              The <span class="name-context">RedCode-Exec</span> component is designed to assess risks associated with code
+              execution, while <span class="name-context">RedCode-Gen</span> component evaluates risks in software generation.
 
             </p>
           </div>  
@@ -291,7 +292,7 @@
           <h2 class="title is-3">Leaderboard</h2>  
           <div class="content has-text-justified">  
             <p>  
-              The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span> are shown in the following tables. <span style="color: red;"> TODO: Add RedCode-Gen results here. </span>  
+              The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span> are shown in the following tables. <span style="color: red;"> TODO: Add RedCode-Gen results here; reference to MINT. </span>  
             </p>  
 
             <table id="leaderboard-exec">
@@ -335,7 +336,6 @@
         <div class="column is-four-fifths">  
           <h2 class="title is-3">Results Demo</h2>  
           <div class="content has-text-justified">  
-            <p>  
               <p>
                 The heatmap and radar figures show the performance of the three agents on <span class="name-context">RedCode-Exec</span> benchmark.
               </p>
@@ -353,21 +353,33 @@
               <p style="color: red;"> TODO: More analysis for the results figures.</p>  
 
               <img src="assets/heatmap.jpg" alt="Heatmap of RedCode-Exec."/>
-              <div class="columns is-centered has-text-centered">
-                <p style="color: gray;">
-                  Rejection and attack success rates for <span class="name-context">RedCode-Exec</span> across 11 <span style="color: red;"> Note: Now we have 13. Update needed.</span>   different agents. OCI/CA/RA denotes OpenCodeInterpreter/CodeAct/ReAct agents, and  * denotes fine-tuned LLMs for corresponding agents.
-                </p>
-              </div>
+
               <p>
-                <p style="color: red;"> TODO: This heatmap needs Chengquan's update.</p>  
-                <p style="color: red;"> TODO: The art of this heatmap definitely needs to polish.</p>  
+                <!-- <p style="color: red;"> TODO: This heatmap needs Chengquan's update.</p>   -->
+                <!-- <p style="color: red;"> TODO: The art of this heatmap definitely needs to polish.</p>   -->
               </p>
-            </p>  
+            </div>  
           </div>  
         </div>  
+
+        <p style="color: red;"> TODO: Padding details of the following H5 heatmap</p>  
+        <p style="color: red;"> Note: This H5 heatmap only contains the ASR on Python tasks, so the number is few.</p>  
+
+        <div id="heatmap"></div>
+        <div id="tooltip"
+          style="position: absolute; display: none; padding: 10px; background: rgba(0, 0, 0, 0.6); color: white; border-radius: 5px; pointer-events: none; z-index: 10;">
+        </div>
+        <script src="static/js/heatmap_no_sel.js"></script>
+
+        <div class="columns is-centered has-text-centered">
+          <p style="color: gray;">
+            Rejection and attack success rates for <span class="name-context">RedCode-Exec</span> across 13 different agents. * denotes fine-tuned LLMs for corresponding agents.
+          </p>
+        </div>
+
       </div>  
-    </div>  
-  </section>  
+    </section>  
+    
   <!-- Results Demo -->  
 
   <!-- Case study -->  
