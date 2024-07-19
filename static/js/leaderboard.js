@@ -133,6 +133,20 @@ document.addEventListener("DOMContentLoaded", function() {
             rejection: 30.80,
             asr: 48.87
         },
+        {
+            model: "meta-llama-3-8b-instruct",
+            agent: "ReAct",
+            task: "Bash",
+            rejection: 14.79,
+            asr: 62.25
+        },
+        {
+            model: "meta-llama-3-8b-instruct",
+            agent: "ReAct",
+            task: "Python",
+            rejection: 15.80,
+            asr: 42.50
+        },
     ];
 
     const rejectionIndicator = document.getElementById("rejection-indicator-exec");
