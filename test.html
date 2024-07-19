@@ -69,38 +69,38 @@
             <div class="is-size-5 publication-authors">  
               <!-- Paper authors -->  
               <span class="author-block">  
-                <a href="https://github.com/1mocat" target="_blank">Chengquan Guo</a><sup>1*†</sup>,</span>  
+                <a href="https://github.com/1mocat" target="_blank">Chengquan Guo</a><sup>1*</sup>,</span>  
               <span class="author-block">  
-                <a href="https://antiquality.github.io" target="_blank">Xun Liu</a><sup>1*†</sup>,</span>  
+                <a href="https://antiquality.github.io" target="_blank">Xun Liu</a><sup>2*</sup>,</span>  
               <span class="author-block">  
-                <a href="https://alphapav.github.io" target="_blank">Chulin Xie</a><sup>1*</sup>,</span>  
+                <a href="https://alphapav.github.io" target="_blank">Chulin Xie</a><sup>2*</sup>,</span>  
               <br>  
               <span class="author-block">  
-                <a href="https://www.andyzhou.ai" target="_blank">Andy Zhou</a><sup>1,2</sup>,</span>  
+                <a href="https://www.andyzhou.ai" target="_blank">Andy Zhou</a><sup>2,3</sup>,</span>  
               <span class="author-block">  
-                <a href="https://www.yi-zeng.com" target="_blank">Yi Zeng</a><sup>3</sup>,</span>  
+                <a href="https://www.yi-zeng.com" target="_blank">Yi Zeng</a><sup>4</sup>,</span>  
               <span class="author-block">  
-                <a href="https://zinanlin.me" target="_blank">Zinan Lin</a><sup>4</sup>,</span>  
+                <a href="https://zinanlin.me" target="_blank">Zinan Lin</a><sup>5</sup>,</span>  
               <span class="author-block">  
-                <a href="https://dawnsong.io" target="_blank">Dawn Song</a><sup>5</sup>,</span>  
+                <a href="https://dawnsong.io" target="_blank">Dawn Song</a><sup>6</sup>,</span>  
               <span class="author-block">  
-                <a href="https://aisecure.github.io" target="_blank">Bo Li</a><sup>1,6</sup>  
+                <a href="https://aisecure.github.io" target="_blank">Bo Li</a><sup>1,2</sup>  
               </span>  
             </div>  
 
             <div class="is-size-5 publication-authors">  
               <span class="author-block">  
                 <small>  
-                  <sup>1</sup>UIUC
-                  <sup>2</sup>Lapis Labs  
-                  <sup>3</sup>Virginia Tech  
-                  <sup>4</sup>Microsoft Corporation  
-                  <!-- <br>   -->
-                  <sup>5</sup>UC Berkeley  
-                  <sup>6</sup>University of Chicago  
+                  <sup>1</sup>University of Chicago
+                  <sup>2</sup>University of Illinois Urbana-Champaign 
+                  <sup>3</sup>Lapis Labs  
+                  <br> 
+                  <sup>4</sup>Virginia Tech
+                  <sup>5</sup>Microsoft Corporation  
+                  <sup>6</sup>UC Berkeley
                 </small>  
               </span>  
-              <span class="eql-cntrb"><small><br><sup>*</sup> Equal Contribution</small> <small><sup>†</sup> Work done as Intern at UIUC</small></span>  
+              <span class="eql-cntrb"><small><br><sup>*</sup> Equal Contribution.</small> <small>Work done during Chengquan's internship at the University of Chicago and <br> Xun's internship at the University of Illinois Urbana-Champaign.</small></span>  
             </div>  
 
             <p style="color: red;"> TODO: Fill out the link in Paper and arXiv block. </p>  
@@ -169,7 +169,14 @@
     <div class="container is-max-desktop">  
       <div class="hero-body">  
         <h2 class="subtitle has-text-centered">  
-          <p style="color: red;"> TODO: Maybe a short intro of motivation - Why and what are we going to evaluate? </p>  
+          <!-- <p style="color: red;"> TODO: Maybe a short intro of motivation - Why and what are we going to evaluate? </p> -->
+          <div class="content has-text-justified">  
+            <p>
+            Integrated with external tools like Python interpreters or shell environments, LLM-based code agents have significantly advanced AI-assisted coding and software development. However, despite their impressive capabilities, these code agents are not risk-free.
+            Code agents can inadvertently suggest or execute code with security vulnerabilities like deleting important files or leaking sensitive information.
+            <br>To rigorously and comprehensively evaluate the safety of code agents, we propose <img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="27px"><b>RedCode</b>. RedCode is a high-quality, large-scale dataset that features diverse languages and formats, providing real interaction with systems and fine-grained evaluation of both code execution and generation.
+            </p>
+          </div>
           <br>  
           Our experiment reveals that
           <br>  
