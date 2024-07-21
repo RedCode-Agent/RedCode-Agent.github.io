@@ -1,14 +1,58 @@
 .name-bold {
-    font-family: "Nanum Gothic Coding", monospace;
+    /* font-family: "Nanum Gothic Coding", monospace; */
     font-weight: 700;
+    font-size: 1.1em;
     font-style: normal;
+    color: rgb(255, 0, 0);
 }
 
 .name-context {
-    font-family: "Nanum Gothic Coding", monospace;
+    /* font-family: "Nanum Gothic Coding", monospace; */
     font-weight: 700;
     font-size: 1.2em;
     font-style: normal;
+    color: rgb(255, 0, 0);
+}
+
+.demo-link1 {
+    color: #d5aafb; /* Starting color */
+    font-weight: bold; /* Bold text */
+}
+
+.demo-link2 {
+    color: #d09ffa; /* Intermediate color */
+    font-weight: bold; /* Bold text */
+}
+
+.demo-link3 {
+    color: #be7bf7; /* Intermediate color */
+    font-weight: bold; /* Bold text */
+}
+
+.demo-link4 {
+    color: #b45dff; /* Intermediate color */
+    font-weight: bold; /* Bold text */
+}
+
+.demo-link5 {
+    color: #a949fd; /* Ending color */
+    font-weight: bold; /* Bol */
+
+.demo-container {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.demo-container img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+.demo-container p {
+    color: gray;
+    text-align: center;
 }
 
 .bibtex-code {  
