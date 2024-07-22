@@ -29,7 +29,7 @@ function loadChoice1() {
     loadScript('static/js/heatmap_python_rej.js');
 }
 function loadChoice2() {
-    loadScript('static/js/heatmap_no_sel.js');
+    loadScript('static/js/heatmap_python_suc.js');
 }
 function loadChoice3() {
     loadScript('static/js/heatmap_bash_rej.js');
