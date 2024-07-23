@@ -134,7 +134,7 @@ function updateHeatmap() {
   });      
 
   // Sort models based on the calculated average asr      
-  filteredData.sort((a, b) => a.average - b.average); // Sort ascending      
+  filteredData.sort((a, b) => -(a.average - b.average)); // Sort ascending      
 
   d3.select("#heatmap svg").remove(); // Clear the existing SVG      
   renderHeatmap(filteredData); // Render the sorted heatmap      
@@ -302,7 +302,7 @@ var xLabels = svg
   .enter()  
   .append("g")  
   .attr("class", "x-label")  
-  .attr("transform", (d, i) => `translate(${labelPadding + i * cellWidth + cellWidth / 2 -3}, ${svgHeight - 3*cellWidth}) rotate(90)`); // Adjusts the position and rotation  
+  .attr("transform", (d, i) => `translate(${labelPadding + i * cellWidth + cellWidth / 2 -3}, ${svgHeight - 2.3*cellWidth}) rotate(90)`); // Adjusts the position and rotation  
 
 xLabels  
   .append("text")  

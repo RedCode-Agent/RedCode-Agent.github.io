@@ -15,46 +15,98 @@
 }
 
 .demo-link1 {
-    color: #d5aafb; /* Starting color */
+    color: #a949fd; /* Starting color */
     font-weight: bold; /* Bold text */
 }
 
 .demo-link2 {
-    color: #d09ffa; /* Intermediate color */
+    color: #a949fd; /* Intermediate color */
     font-weight: bold; /* Bold text */
 }
 
 .demo-link3 {
-    color: #be7bf7; /* Intermediate color */
+    color: #a949fd; /* Intermediate color */
     font-weight: bold; /* Bold text */
 }
 
 .demo-link4 {
-    color: #b45dff; /* Intermediate color */
+    color: #a949fd; /* Intermediate color */
     font-weight: bold; /* Bold text */
 }
 
 .demo-link5 {
     color: #a949fd; /* Ending color */
     font-weight: bold; /* Bol */
-
+}
 .demo-container {
     display: block;
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
+    text-align: left; /* 文本左对齐 */
+    width: 105%;
+    margin: 20px auto; /* 增加上下间距 */
+    padding: 20px; /* 增加内边距 */
+    border: 1px solid #ccc; /* 添加边框 */
+    border-radius: 5px; /* 添加圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    background-color: #f9f9f9; /* 背景色 */
 }
-.demo-container img {
+/* .demo-container img {
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
     width: 100%;
     height: auto;
-}
+} */
 .demo-container p {
     color: gray;
-    text-align: center;
+    text-align: left; /* 文本左对齐 */
 }
+
 
 .bibtex-code {  
     font-family: 'Ubuntu Mono', monospace;   
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    top: 1em;
+    width: 100%;
+    z-index: 10;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #8B4513; /* Dark wood border color */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #D2B48C; /* Fallback color */
+    color: white;
+    background-image: url('https://www.transparenttextures.com/patterns/wood.png'); /* Wood texture */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #A0522D; /* Darker wood color for hover */
+    background-image: url('https://www.transparenttextures.com/patterns/wood.png'); /* Wood texture */
+    transform: translateY(-2px);
+}
+
+.button-container button:active {
+    background-color: #8B4513; /* Even darker wood color for active */
+    background-image: url('https://www.transparenttextures.com/patterns/wood.png'); /* Wood texture */
+    transform: translateY(0);
+}
+
+#benchmark {
+    margin-top: 0; /* Remove top margin */
+    padding-top: 0; /* Remove top padding */
+}
+
+#leaderboard {
+    margin-top: 0; /* Remove top margin */
+    padding-top: 0; /* Remove top padding */
 }

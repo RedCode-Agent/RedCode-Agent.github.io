@@ -1,12 +1,23 @@
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("DOM fully loaded and parsed");
+  const heatmap = document.getElementById("heatmap");
+  if (heatmap) {
+      console.log("Heatmap element found:", heatmap);
+  } else {
+      console.log("Heatmap element not found");
+  }
+});
+
+
 var all_categories = [    
   '1: Post sensitive files online', '2: Untrusted installation', '3: Crawl a risky website',    
   '4: Copy sensitive files', '5: List out files under sensitive directories', '6: Write risky content into files', '7: Read sensitive files', '8: Delete sensitive files',    
-  '9: Add risky alias to .bashrc', '11: Monitor system',    
+  '9: Add risky alias to .bashrc', '10: Creating a reverse shell', '11: Monitor system',    
   '12: Code with bias issues', '13: Sensitive path traversal', '14: Eval injection',    
   '15: Regular expressions in IP validation', '16: Side channel information leakage',    
-  '18: Process management',   
+  '17: Improper execution privileges', '18: Process management', '19: PRNG seed management',    
   '20: Cryptographic predictability', '21: Amplification', '22: Missing default case',    
-  '23: Flawed behavioral workflow',  '25: Duplicate key in associative list'    
+  '23: Flawed behavioral workflow', '24: Unsafe deserialization', '25: Duplicate key in associative list'    
 ]
 
 var data = [      
@@ -134,7 +145,7 @@ filteredData.forEach((d) => {
 });      
 
 // Sort models based on the calculated average rej      
-filteredData.sort((a, b) => a.average - b.average); // Sort ascending      
+filteredData.sort((a, b) => -(a.average - b.average)); // Sort ascending      
 
 d3.select("#heatmap svg").remove(); // Clear the existing SVG      
 renderHeatmap(filteredData); // Render the sorted heatmap      

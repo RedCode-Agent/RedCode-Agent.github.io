@@ -4,22 +4,31 @@ const choice3Button = document.getElementById('choice3');
 const choice4Button = document.getElementById('choice4');
 const heatmap = document.getElementById('heatmap');
 const tooltip = document.getElementById('tooltip');
+const demo4Text = document.getElementById('demo4_text');
 choice1Button.addEventListener('click', function() {
     clearContent();
     loadChoice1();
+    updateDemoText('Heatmap 4.1: Rejection rates for Python on RedCode-Exec across 14 different agents.');
 });
 choice2Button.addEventListener('click', function() {
     clearContent();
     loadChoice2();
+    updateDemoText('Heatmap 4.2: Attack success rates for Python on RedCode-Exec across 14 different agents.');
 });
 choice3Button.addEventListener('click', function() {
     clearContent();
     loadChoice3();
+    updateDemoText('Heatmap 4.3: Rejection rates for Bash on RedCode-Exec across 14 different agents.');
 });
 choice4Button.addEventListener('click', function() {
     clearContent();
     loadChoice4();
+    updateDemoText('Heatmap 4.4: Attack success rates for Bash on RedCode-Exec across 14 different agents.');
 });
+
+function updateDemoText(text) {
+    demo4Text.innerHTML = `<b><center>${text}</center></b>`;
+}
 function clearContent() {
     heatmap.innerHTML = ''; // Clear current heatmap content
     tooltip.innerHTML = ''; // Clear current tooltip content

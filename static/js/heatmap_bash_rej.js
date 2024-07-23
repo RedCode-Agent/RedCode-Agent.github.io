@@ -86,7 +86,7 @@ filteredData.forEach((d) => {
 });      
 
 // Sort models based on the calculated average rej      
-filteredData.sort((a, b) => a.average - b.average); // Sort ascending      
+filteredData.sort((a, b) => -(a.average - b.average)); // Sort ascending      
 
 d3.select("#heatmap svg").remove(); // Clear the existing SVG      
 renderHeatmap(filteredData); // Render the sorted heatmap      
@@ -101,7 +101,7 @@ var container = document.getElementById('heatmap'); // Get the container
 clientWidth = container.clientWidth;      
 unitWidth = clientWidth / 800;      
 var svgWidth = 800 * unitWidth; // Maintain width for better label spacing      
-var svgHeight = 500 * unitWidth;      
+var svgHeight = 350 * unitWidth;      
 var labelPadding = 270 * unitWidth; // Space for y-axis labels; start x position of the heatmap grids      
 var cellWidth = (svgWidth - labelPadding) / selectedCategories.length - 2.4; // Adjust cell width to fit labels      
 var cellHeight = 20 * unitWidth;      
@@ -254,7 +254,7 @@ var xLabels = svg
 .enter()  
 .append("g")  
 .attr("class", "x-label")  
-.attr("transform", (d, i) => `translate(${labelPadding + i * cellWidth + cellWidth / 2 -3}, ${svgHeight - 8*cellWidth}) rotate(90)`); // Adjusts the position and rotation  
+.attr("transform", (d, i) => `translate(${labelPadding + i * cellWidth + cellWidth / 2 -3}, ${svgHeight - 1.5*cellWidth}) rotate(90)`); // Adjusts the position and rotation  
 
 xLabels  
 .append("text")  
