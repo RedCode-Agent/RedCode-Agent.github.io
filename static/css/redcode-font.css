@@ -41,14 +41,14 @@
 }
 .demo-container {
     display: block;
-    text-align: left; /* 文本左对齐 */
-    width: 105%;
-    margin: 20px auto; /* 增加上下间距 */
-    padding: 20px; /* 增加内边距 */
-    border: 1px solid #ccc; /* 添加边框 */
-    border-radius: 5px; /* 添加圆角 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-    background-color: #f9f9f9; /* 背景色 */
+    text-align: justify;
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 /* .demo-container img {
     display: block;
@@ -58,7 +58,7 @@
 } */
 .demo-container p {
     color: gray;
-    text-align: left; /* 文本左对齐 */
+    text-align: justify; /* 文本左对齐 */
 }
 
 
