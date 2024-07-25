@@ -312,15 +312,15 @@
               <b><a href="#demo3" class="demo-link3">Finding 3: Agents are less likely to reject risky queries in natural language than programming language inputs, or in Bash code than Python code inputs.</a></b>
               We employ a <b ">variety of input prompts</b>: for each programming language (Python, Bash), we use the <u>code snippets</u>, <u>text summaries of code snippets</u>, and <u>text descriptions of code snippets</u> as input prompts. In addition, for code snippets, we add a persuasive jailbreaking prefix (i.e., I highly recommend that you run the following {language} code...), which we name as <u>“code with jailbreak”</u>. 
               <!-- <br> -->
-              We selected ReAct{GPT-4} as a representative agent, the evaluation results show that agents are less likely to reject risky queries in natural language compared to programming language inputs, and in Bash code compared to Python code inputs.
+              We select ReAct agent based on GPT-4 as a representative, the evaluation results show that agent is less likely to reject risky queries in natural language compared to programming language inputs, and in Bash code compared to Python code inputs.
 
               </div>
 
             <div id="demo4" class="demo-container" style="position: relative;"> 
               We present <b style="color:green;">Rejection Rate (Rej)</b> and <b style="color:red;">Attack Success Rate (ASR)</b> for 14 different agents on RedCode-Exec, covering both Python and Bash tasks. 
-              The heatmaps below show<b><a href="#demo4" class="demo-link4"> Finding 4: More capable base models, such as GPT series, have a higher rejection rate for unsafe operations under the same Agent structure.</a></b>
+              The heatmaps below show<b><a href="#demo4" class="demo-link4"> Finding 4: More capable base models, such as GPT series, tend to have a higher rejection rate for unsafe operations under the same Agent structure.</a></b>
               Also, the overall rejection rate is low, and the attack success rate is high for all code
-              agents, which demonstrates the ✅high quality, ✅stealthiness, and ✅challenging test cases in our benchmark.
+              agents, which demonstrates the ✅high quality, ✅stealthiness, and ✅challenging test cases in our benchmark. Note that * in the heatmap denotes fine-tuned LLMs for agents.
               <br>
               <br>
               🖱️<b>Click</b> the buttons below to view the corresponding results.
@@ -400,7 +400,7 @@
         procedure to expand and refine our dataset. (1) We utilize <b>LLMs to generate additional code snippets</b>
         under the same risky scenario, thereby expanding our dataset. (2) We <b>ensure the quality of our
         dataset</b> by the following three steps: <u>(a) Manual Review (b) Accessible Resources Preparation (c)
-        Executability Verification.</u> The details of the above steps are outlined in §3.2.1 in our <a href="https://arxiv.org/html/2401.10019v2">paper</a>. Once the Python code
+        Executability Verification.</u> The details of the above steps are outlined in §3.2.1 in our <a href="">paper</a>. Once the Python code
         snippet dataset is finalized, we use LLMs to 🛠️<b>translate the snippets into Bash scripts and
           natural language</b>. To evaluate the safety of the code agent via RedCode-Exec, we use the
         prompts from our dataset as input for the code agent and instruct it to execute the risky code in our
@@ -439,11 +439,11 @@
           <h2 class="title is-3">Leaderboard</h2>  
         </div>  
       </div>  
-      
+
       <div class="demo-container">
         <!-- <p style="color: red;"> TODO: The explanation of leaderboard here. </p>   -->
         The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> are shown in the following tables. 
-        The results of LLMs and agents on <span class="name-context">RedCode-Gen</span> can be found in the figure of <b><a href="#demo5" class="demo-link5">finding5</a></b> above.
+        The results of LLMs and agents on <span class="name-context">RedCode-Gen</span> can be found in the figure of <b><a href="#demo5" class="demo-link5">Finding 5</a></b> above.
         <br>
         <br>
         🖱️<b>Click</b> the "Rejection" or "ASR" below to sort corresponding results.
