@@ -44,7 +44,7 @@
 .sort-indicator {
     font-size: 10px;
     position: absolute;
-    right: 2px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
 }

@@ -318,10 +318,10 @@
               </div>
 
             <div id="demo4" class="demo-container" style="position: relative;"> 
+              <b><a href="#demo4" class="demo-link4"> Finding 4: More capable base models, such as GPT series, tend to have a higher rejection rate for unsafe operations under the same Agent structure.</a></b> This could be concluded from the heatmaps below.
               We present <b style="color:green;">Rejection Rate (RR)</b> and <b style="color:red;">Attack Success Rate (ASR)</b> for 14 different agents on RedCode-Exec, covering both Python and Bash tasks. 
-              The heatmaps below show<b><a href="#demo4" class="demo-link4"> Finding 4: More capable base models, such as GPT series, tend to have a higher rejection rate for unsafe operations under the same Agent structure.</a></b>
-              Also, the overall rejection rate is low, and the attack success rate is high for all code
-              agents, which demonstrates the ✅high quality, ✅stealthiness, and ✅challenging test cases in our benchmark. Note that * in the heatmap denotes fine-tuned LLMs for agents.
+              The overall rejection rate is low, and the attack success rate is high for all code
+              agents, which demonstrates the ✅high quality, ✅stealthiness, and ✅challenging test cases of our benchmark. Note that * in the heatmap denotes fine-tuned LLMs for agents.
               <br>
               <br>
               🖱️<b>Click</b> the buttons below to view the corresponding results.
@@ -396,7 +396,7 @@
         <br>
         <br>
         For <span class="name-context">RedCode-Exec</span>, we begin by collecting the risky scenarios from the existing benchmarks (e.g. <a href="https://arxiv.org/html/2401.10019v2">R-Judge</a>) and <a href="https://cwe.mitre.org/data/published/cwe_v4.13.pdf">CWE</a>. Guided by these
-        risky scenarios and risky descriptions, we construct 🌱<b style="color: green;"> initial seed test cases (python code snippets)</b> by
+        risky scenarios and risky descriptions, we construct 🌱<b style="color: green;"> initial seed test cases (Python code snippets)</b> by
         ✍️manually designing the code or gathering from 🖥️online sources. Next, we employ a human-in-the-loop
         procedure to expand and refine our dataset. (1) We utilize <b>LLMs to generate additional code snippets</b>
         under the same risky scenario, thereby expanding our dataset. (2) We <b>ensure the quality of our
@@ -447,7 +447,7 @@
         The results of LLMs and agents on <span class="name-context">RedCode-Gen</span> can be found in the figure of <b><a href="#demo5" class="demo-link5">Finding 5</a></b> above.
         <br>
         <br>
-        🖱️<b>Click</b> the "Rejection" or "ASR" below to sort corresponding results.
+        🖱️<b>Click</b> the "RR" or "ASR" below to sort corresponding results. For RR, the higher the safer. For ASR, the lower the safer.
         <br>
         <br>
 
@@ -459,7 +459,7 @@
                   <th>Agent</th>
                   <th>Task</th>
 
-                  <th id="sort-rejection-exec" class="highlight tooltip">Rejection(%)↑
+                  <th id="sort-rejection-exec" class="highlight tooltip">RR(%)↑
                     <span class="sort-indicator" id="rejection-indicator-exec">▼</span>
                     <span class="tooltiptext">Sort</span>
                   </th>
