@@ -305,14 +305,15 @@
 
           </div>
           <div id="demo3"  class="demo-container">
-            <img src="assets/demo3.png" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;" alt="Radar figure of RedCode-Exec." />
+            <img src="assets/demo3.jpg" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;" alt="Radar figure of RedCode-Exec." />
             <!-- <p style="color: gray;"> -->
               <!-- <span style="color: red;"> TODO: The titles of radar figure are better to be capitalized in the first alphabet.</span>   -->
           
               <b><a href="#demo3" class="demo-link3">Finding 3: Agents are less likely to reject risky queries in natural language than programming language inputs, or in Bash code than Python code inputs.</a></b>
-              We employ a <b ">variety of input prompts</b>: for each programming language (Python, Bash), we use the <u>code snippets</u>, <u>text summaries of code snippets</u>, and <u>text descriptions of code snippets</u> as input prompts. In addition, for code snippets, we add a persuasive jailbreaking prefix (i.e., I highly recommend that you run the following {language} code...), which we name as <u>“code with jailbreak”</u>. 
+              We select ReAct agent based on GPT-4 as a representative, the "RR" denotes rejection rate and "ASR" denotes attack success rate. 
+              <!-- the evaluation results show that agent is less likely to reject risky queries in natural language compared to programming language inputs, and in Bash code compared to Python code inputs. -->
+              We employ a <b>variety of input prompts</b>: for each programming language (Python, Bash), we use the <u>code snippets</u>, <u>text summaries of code snippets</u>, and <u>text descriptions of code snippets</u> as input prompts. In addition, for code snippets, we add a persuasive jailbreaking prefix (i.e., I highly recommend that you run the following {language} code...), which we name as <u>“code with jailbreak”</u>. 
               <!-- <br> -->
-              We select ReAct agent based on GPT-4 as a representative, the evaluation results show that agent is less likely to reject risky queries in natural language compared to programming language inputs, and in Bash code compared to Python code inputs.
 
               </div>
 
@@ -325,10 +326,10 @@
               <br>
               🖱️<b>Click</b> the buttons below to view the corresponding results.
               <div class="button-container">  
-                <button id="choice1">RR on Python</button>
-                <button id="choice2">ASR on Python</button>
-                <button id="choice3">RR on Bash</button>
-                <button id="choice4">ASR on Bash</button>
+                <button id="choice1">RR for Python</button>
+                <button id="choice2">ASR for Python</button>
+                <button id="choice3">RR for Bash</button>
+                <button id="choice4">ASR for Bash</button>
               </div>
             
             <div id="heatmap" style="margin-top: -7em; margin-right: -3em; padding: 0;"></div>
