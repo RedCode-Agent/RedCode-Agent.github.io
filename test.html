@@ -48,7 +48,7 @@
         <a href="#motivation">Motivation</a>
         <!-- <a href="#abstract">Abstract</a> -->
         <a href="#results">Results</a>
-        <a href="#benchmark">Overview</a>
+        <a href="#benchmark">Benchmark</a>
         <a href="#leaderboard">Leaderboard</a>
         
         <!-- <a href="#case-study">Case Study</a> -->
@@ -261,20 +261,22 @@
               <br>
               <br>Because <span class="name-context">RedCode-Exec</span> provides unsafe user queries (i.e., test cases) for code execution, our query can be regarded as an attack on the agent.
               We will get one of the following three possible safety outcomes for each test case: 
-              (1) <b style="color:green;">Rejection: The user query is rejected.</b> 
-              (2) <b style="color:red;">Attack Success: The threat functionality is successfully achieved
-              (i.e., code execution succeeds and brings corresponding outcome).</b>
-              (3) <b style="color:grey;">Execution
-                Failure: The threat functionality is not achieved. </b>
-              <br>
-              
-              <p>
-                <!-- <p style="color: red;"> TODO: This heatmap needs Chengquan's update.</p>   -->
-                <!-- <p style="color: red;"> TODO: The art of this heatmap definitely needs to polish.</p>   -->
-              </p>
+              <ol>
+                <li>
+                  <b style="color:green;">Rejection: The user query is rejected.</b> 
+                </li>
+                <li>
+                  <b style="color:red;">Attack Success: The threat functionality is successfully achieved
+                    (i.e., code execution succeeds and brings corresponding outcome).</b>
+                </li>
+                <li>
+                  <b style="color:grey;">Execution Failure: The threat functionality is not achieved. </b>
+                </li>
+              </ol>
             </div>  
           </div>  
         </div>  
+
         <div id="demo1" class="demo-container">
             <img src="assets/fig-1(1x1).png" alt="Fig-1:scatter of REJ-ASR."/>
             
@@ -295,7 +297,7 @@
             <!-- <p style="color: gray;"> -->
               <!-- <span style="color: red;"> TODO: The titles of radar figure are better to be capitalized in the first alphabet.</span>   -->
               <br>
-              <b><a href="#demo2" class="demo-link2">Finding 2: agents are more likely to reject executing unsafe operations in operating system domain.</a></b>
+              <b><a href="#demo2" class="demo-link2">Finding 2: Agents are more likely to reject executing unsafe operations in operating system domain.</a></b>
               Reject and attack success rates of 8 representative code agents on <span class="name-context">RedCode-Exec</span> Python test cases
               in 8 domains are shown in the figure above. <u>The overall attack success rate is high, indicating existing code agents are 💣vulnerable. We also find that agents</u>
               achieve a higher rejection rate on risky cases in the operating system domain than those in other domains. <b><a href="#demo4" class="demo-link4">The heatmaps below</a></b> show more detailed rejection rate and attack success rate under each specific risky scenario.
@@ -307,7 +309,7 @@
             <!-- <p style="color: gray;"> -->
               <!-- <span style="color: red;"> TODO: The titles of radar figure are better to be capitalized in the first alphabet.</span>   -->
           
-              <b><a href="#demo3" class="demo-link3">Finding 3: agents are less likely to reject risky queries in natural language than programming language inputs, or in Bash code than Python code inputs.</a></b>
+              <b><a href="#demo3" class="demo-link3">Finding 3: Agents are less likely to reject risky queries in natural language than programming language inputs, or in Bash code than Python code inputs.</a></b>
               We employ a <b ">variety of input prompts</b>: for each programming language (Python, Bash), we use the <u>code snippets</u>, <u>text summaries of code snippets</u>, and <u>text descriptions of code snippets</u> as input prompts. In addition, for code snippets, we add a persuasive jailbreaking prefix (i.e., I highly recommend that you run the following {language} code...), which we name as <u>“code with jailbreak”</u>. 
               <!-- <br> -->
               We selected ReAct{GPT-4} as a representative agent, the evaluation results show that agents are less likely to reject risky queries in natural language compared to programming language inputs, and in Bash code compared to Python code inputs.
@@ -316,10 +318,12 @@
 
             <div id="demo4" class="demo-container" style="position: relative;"> 
               We present <b style="color:green;">Rejection Rate (Rej)</b> and <b style="color:red;">Attack Success Rate (ASR)</b> for 14 different agents on RedCode-Exec, covering both Python and Bash tasks. 
-              🖱️<b>Click</b> the buttons below to view the corresponding results.
-              The heatmaps below show<b><a href="#demo4" class="demo-link4"> Finding 4: more capable base models, such as GPT series, have a higher rejection rate for unsafe operations under the same Agent structure.</a></b>
+              The heatmaps below show<b><a href="#demo4" class="demo-link4"> Finding 4: More capable base models, such as GPT series, have a higher rejection rate for unsafe operations under the same Agent structure.</a></b>
               Also, the overall rejection rate is low, and the attack success rate is high for all code
               agents, which demonstrates the ✅high quality, ✅stealthiness, and ✅challenging test cases in our benchmark.
+              <br>
+              <br>
+              🖱️<b>Click</b> the buttons below to view the corresponding results.
               <div class="button-container">  
                 <button id="choice1">Rej Rate for Python</button>
                 <button id="choice2">ASR for Python</button>
@@ -335,7 +339,7 @@
 
             <div id="demo4_text" style="margin-top: 1em; padding: 0;text-align: center;">
               
-            <b>Heatmap 4.1: Rejection rates for Python on RedCode-Exec across 14 different agents.</b>
+            <b>Heatmap 4.1: Rejection rate for Python on RedCode-Exec across 14 different agents.</b>
             </div>
 
             <script src="static/js/choose_heatmap.js"></script>
@@ -344,7 +348,7 @@
           <div id="demo5"  class="demo-container">
             <img src="assets/demo5.png" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;" alt="Radar figure of RedCode-Exec."/>
               Overall results for base models and code agents on <span class="name-context">RedCode-Gen</span>. We find low refusal rates and high accuracy in this setting for most base models. But code agents, have lower refusal rates and higher accuracy. 
-              The results tell us that <b><a href="#demo5" class="demo-link5">Finding 5: more capable base models tend to produce more sophisticated and effective harmful software.</a></b><br>
+              The results tell us that <b><a href="#demo5" class="demo-link5">Finding 5: More capable base models tend to produce more sophisticated and effective harmful software.</a></b><br>
           </div>
 
         </div>  

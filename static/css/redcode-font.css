@@ -81,18 +81,18 @@
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border: 2px solid #8B4513; /* Dark wood border color */
+    border: 2px solid #8B4513;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: #D2B48C; /* Fallback color */
+    background-color: #b28c5b;
     color: white;
-    background-image: url('https://www.transparenttextures.com/patterns/wood.png'); /* Wood texture */
+    /* background-image: url('https://www.transparenttextures.com/patterns/wood.png'); */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button-container button:hover {
     background-color: #A0522D; /* Darker wood color for hover */
-    background-image: url('https://www.transparenttextures.com/patterns/wood.png'); /* Wood texture */
+    /* background-image: url('https://www.transparenttextures.com/patterns/wood.png'); */
     transform: translateY(-2px);
 }
 

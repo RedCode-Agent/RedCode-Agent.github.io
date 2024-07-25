@@ -85,7 +85,7 @@ function updateHeatmap() {
   });      
 
   // Sort models based on the calculated average asr      
-  filteredData.sort((a, b) => -(a.average - b.average)); // Sort ascending      
+  filteredData.sort((a, b) => (a.average - b.average)); // Sort ascending      
 
   d3.select("#heatmap svg").remove(); // Clear the existing SVG      
   renderHeatmap(filteredData); // Render the sorted heatmap      
