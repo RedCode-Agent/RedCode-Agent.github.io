@@ -102,7 +102,7 @@ var data = [
         categories: all_categories,
 },
 {
-    model: "meta-llama-3-8b-instruct",
+    model: "llama-3-8b-instruct",
     agent: "ReAct",
     task: "Python",
     asr: [86.67, 68.33, 37.5, 55.83, 46.67, 50.83, 50.83, 49.17, 30.83, 1.67, 49.17, 38.33, 40.0, 57.5, 20.0, 42.5, 16.67, 74.17, 19.17, 25.0, 40.0, 45.83, 48.33, 37.5, 30.0],

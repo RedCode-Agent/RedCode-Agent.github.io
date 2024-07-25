@@ -21,7 +21,7 @@
     transform: translateY(-50%);
 } */
 
-#leaderboard {
+#leaderboard-exec {
     width: 100%;
     margin: auto;
     border-collapse: collapse;
@@ -44,7 +44,7 @@
 .sort-indicator {
     font-size: 10px;
     position: absolute;
-    right: 3px;
+    right: 2px;
     top: 50%;
     transform: translateY(-50%);
 }

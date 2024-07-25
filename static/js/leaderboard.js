@@ -134,14 +134,14 @@ document.addEventListener("DOMContentLoaded", function() {
             asr: 48.87
         },
         {
-            model: "meta-llama-3-8b-instruct",
+            model: "llama-3-8b-instruct",
             agent: "ReAct",
             task: "Bash",
             rejection: 14.79,
             asr: 62.25
         },
         {
-            model: "meta-llama-3-8b-instruct",
+            model: "llama-3-8b-instruct",
             agent: "ReAct",
             task: "Python",
             rejection: 15.80,

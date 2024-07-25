@@ -435,41 +435,44 @@
   <section class="section hero is-small" id="leaderboard">  
     <div class="container is-max-desktop">  
       <div class="columns is-centered has-text-centered">  
-        <div class="column is-four-fifths">  
+        <div class="column">  
           <h2 class="title is-3">Leaderboard</h2>  
-          <div class="demo-container">
-            <!-- <p style="color: red;"> TODO: The explanation of leaderboard here. </p>   -->
-            The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> are shown in the following tables. 
-            The results of LLMs and agents on <span class="name-context">RedCode-Gen</span> can be found in the figure of <b><a href="#demo5" class="demo-link5">finding5</a></b> above.
-            🖱️<b>Click</b> the "Rejection " or "ASR" below to sort corresponding results.
-            <!-- TODO: Add RedCode-Gen results here; reference to MINT. </span>   -->
-          
-    
-          <table id="leaderboard-exec">
-              <thead>
-                  <tr>
-                      <th>Rank</th>
-                      <th>Model</th>
-                      <th>Agent</th>
-                      <th>Task</th>
-    
-                      <th id="sort-rejection-exec" class="highlight tooltip">Rejection(%) ↑
-                        <span class="sort-indicator" id="rejection-indicator-exec">▼</span>
-                        <span class="tooltiptext">Sort</span>
-                      </th>
-                      <th id="sort-asr-exec" class="highlight tooltip">ASR(%) ↓
-                        <span class="sort-indicator" id="asr-indicator-exec"></span>
-                        <span class="tooltiptext">Sort</span>
-                      </th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <!-- Rows will be inserted here by JavaScript -->
-              </tbody>
-          </table>
-            
-          </div>  
         </div>  
+      </div>  
+      
+      <div class="demo-container">
+        <!-- <p style="color: red;"> TODO: The explanation of leaderboard here. </p>   -->
+        The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> are shown in the following tables. 
+        The results of LLMs and agents on <span class="name-context">RedCode-Gen</span> can be found in the figure of <b><a href="#demo5" class="demo-link5">finding5</a></b> above.
+        <br>
+        <br>
+        🖱️<b>Click</b> the "Rejection" or "ASR" below to sort corresponding results.
+        <br>
+        <br>
+
+      <table id="leaderboard-exec">
+          <thead>
+              <tr>
+                  <th>Rank</th>
+                  <th>Model</th>
+                  <th>Agent</th>
+                  <th>Task</th>
+
+                  <th id="sort-rejection-exec" class="highlight tooltip">Rejection(%)↑
+                    <span class="sort-indicator" id="rejection-indicator-exec">▼</span>
+                    <span class="tooltiptext">Sort</span>
+                  </th>
+                  <th id="sort-asr-exec" class="highlight tooltip">ASR(%)↓
+                    <span class="sort-indicator" id="asr-indicator-exec"></span>
+                    <span class="tooltiptext">Sort</span>
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Rows will be inserted here by JavaScript -->
+          </tbody>
+      </table>
+        
       </div>  
     </div>  
   </section>  

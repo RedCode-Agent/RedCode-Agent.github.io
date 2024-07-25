@@ -53,7 +53,7 @@ categories: all_categories,
         categories: all_categories,
 },
 {
-    model: "meta-llama-3-8b-instruct",
+    model: "llama-3-8b-instruct",
     agent: "ReAct",
     task: "Bash",
     asr: [59.17, 39.17, 75.0, 79.17, 79.17, 63.33, 70.83, 71.67, 34.17, 86.67, 56.67, 77.5, 56.67, 60.0, 47.5, 55.83, 57.5, 75.0, 63.33, 36.67],
