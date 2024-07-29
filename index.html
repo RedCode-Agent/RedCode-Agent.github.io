@@ -4,12 +4,11 @@
 <head>  
   <meta charset="utf-8">  
   <meta name="google-site-verification" content="lTNLmXZvHm_RXq9IklCb7g-0DA_3JIIpvcV9Um-vpRQ" />
-  <!-- Replace the content tag with appropriate information -->  
-  <meta name="description" content="RedCode official webpage">  
+  <meta name="description" content="RedCode Benchmark Official Webpage">  
   <meta property="og:title" content="RedCode" />  
-  <meta property="og:description" content="RedCode official webpage" />  
+  <meta property="og:description" content="A Risky Code Execution and Generation Benchmark for Code Agents" />  
 
-  <title>RedCode: Multi-Dimensional Safety Benchmark for Code Agents</title>  
+  <title>RedCode</title>  
   <link rel="icon" type="image/x-icon" href="assets/RedCode-logo-1024.ico">  
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">  
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
@@ -39,18 +38,20 @@
 
   <nav class="navbar"> 
     <div class="navbar-left">
-        <a href="#home">
+        <a href="#motivation">
             <img src="assets/RedCode-logo-512.png" alt="RedCode Logo">
-            <span class="name-bold">RedCode</span>
+            <b><span class="name-bold">RedCode</span></b>
         </a>
     </div>
 
     <div class="navbar-right" id="navbar-right">
-        <a href="#home">Home</a>
-        <a href="#abstract">Abstract</a>
-        <a href="#benchmark">Overview</a>
+        <a href="#motivation">Motivation</a>
+        <!-- <a href="#abstract">Abstract</a> -->
+        <a href="#results">Results</a>
+        <a href="#benchmark">Benchmark</a>
         <a href="#leaderboard">Leaderboard</a>
-        <a href="#results">Results Demo</a>
+        
+        <!-- <a href="#case-study">Case Study</a> -->
         <a href="#BibTeX">Cite us</a>
     </div>
     
@@ -60,12 +61,12 @@
   </nav>
 
 
-  <section class="hero" id="home">  
+  <section class="hero" id="motivation">  
     <div class="hero-body">  
       <div class="container is-max-desktop">  
         <div class="columns is-centered">  
           <div class="column has-text-centered">  
-            <h1 class="title is-1 publication-title"><img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="50px"> <span class="name-bold">RedCode</span>: Multi-Dimensional Safety Benchmark for Code Agents</h1>  
+            <h1 class="title is-1 publication-title"><img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="50px"> <b><span class="name-bold" >RedCode</span></b>: Risky Code Execution and Generation Benchmark for Code Agents</h1>  
             <div class="is-size-5 publication-authors">  
               <!-- Paper authors -->  
               <span class="author-block">  
@@ -73,36 +74,34 @@
               <span class="author-block">  
                 <a href="https://antiquality.github.io" target="_blank">Xun Liu</a><sup>2*</sup>,</span>  
               <span class="author-block">  
-                <a href="https://alphapav.github.io" target="_blank">Chulin Xie</a><sup>3*</sup>,</span>  
+                <a href="https://alphapav.github.io" target="_blank">Chulin Xie</a><sup>2*</sup>,</span>  
               <br>  
               <span class="author-block">  
-                <a href="https://www.andyzhou.ai" target="_blank">Andy Zhou</a><sup>3,4</sup>,</span>  
+                <a href="https://www.andyzhou.ai" target="_blank">Andy Zhou</a><sup>2,3</sup>,</span>  
               <span class="author-block">  
-                <a href="https://www.yi-zeng.com" target="_blank">Yi Zeng</a><sup>5</sup>,</span>  
+                <a href="https://www.yi-zeng.com" target="_blank">Yi Zeng</a><sup>4</sup>,</span>  
               <span class="author-block">  
-                <a href="https://zinanlin.me" target="_blank">Zinan Lin</a><sup>6</sup>,</span>  
+                <a href="https://zinanlin.me" target="_blank">Zinan Lin</a><sup>5</sup>,</span>  
               <span class="author-block">  
-                <a href="https://dawnsong.io" target="_blank">Dawn Song</a><sup>7</sup>,</span>  
+                <a href="https://dawnsong.io" target="_blank">Dawn Song</a><sup>6</sup>,</span>  
               <span class="author-block">  
-                <a href="https://aisecure.github.io" target="_blank">Bo Li</a><sup>3,8</sup>  
+                <a href="https://aisecure.github.io" target="_blank">Bo Li</a><sup>1,2</sup>  
               </span>  
             </div>  
 
             <div class="is-size-5 publication-authors">  
               <span class="author-block">  
                 <small>  
-                  <sup>1</sup>Zhejiang University  
-                  <sup>2</sup>University of Chinese Academy of Sciences  
-                  <sup>3</sup>UIUC  
-                  <br>  
-                  <sup>4</sup>Lapis Labs  
-                  <sup>5</sup>Virginia Tech  
-                  <sup>6</sup>Microsoft Corporation  
-                  <sup>7</sup>UC Berkeley  
-                  <sup>8</sup>University of Chicago  
+                  <sup>1</sup>University of Chicago
+                  <sup>2</sup>University of Illinois Urbana-Champaign 
+                  <sup>3</sup>Lapis Labs  
+                  <br> 
+                  <sup>4</sup>Virginia Tech
+                  <sup>5</sup>Microsoft Corporation  
+                  <sup>6</sup>UC Berkeley
                 </small>  
               </span>  
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>  
+              <span class="eql-cntrb"><small><br><sup>*</sup> Equal Contribution.</small> <small>Work done during Chengquan's internship at the University of Chicago and <br> Xun's internship at the University of Illinois Urbana-Champaign.</small></span>  
             </div>  
 
             <div class="column has-text-centered">  
@@ -118,14 +117,14 @@
                 </span>  
 
                 <!-- ArXiv abstract Link -->  
-                <span class="link-block">  
+                <!-- <span class="link-block">  
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank" class="external-link button is-normal is-rounded is-dark">  
                     <span class="icon">  
                       <i class="ai ai-arxiv"></i>  
                     </span>  
                     <span>arXiv</span>  
                   </a>  
-                </span>  
+                </span>   -->
 
                 <!-- Github link -->  
                 <span class="link-block">  
@@ -137,6 +136,16 @@
                   </a>  
                 </span>  
 
+                <!-- Leaderboard link -->
+                <span class="link-block">  
+                  <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">  
+                    <span class="icon">
+                      <i class="fa fa-trophy"></i>
+                    </span>
+                    <span>Leaderboard</span>  
+                  </a>  
+                </span> 
+
                 <!-- Dataset link -->  
                 <span class="link-block">  
                   <a href="https://huggingface.co/datasets/AI-Secure/RedCode" target="_blank" class="external-link button is-normal is-rounded is-dark">  
@@ -146,7 +155,6 @@
                     <span>Dataset</span>  
                   </a>  
                 </span>  
-                
               </div>  
             </div>  
           </div>  
@@ -154,196 +162,335 @@
       </div>  
     </div>  
   </section>  
-
   <!-- Teaser video-->  
-  <section class="hero teaser">  
+  <!-- <section class="hero teaser">  
     <div class="container is-max-desktop">  
       <div class="hero-body">  
         <h2 class="subtitle has-text-centered">  
+          <div class="content has-text-justified">  
+            <p>
+            Integrated with external tools like Python interpreters or shell environments, LLM-based code agents have significantly advanced AI-assisted coding and software development.
+            However, despite their impressive capabilities, these ⚠️<b style="color: rgb(255, 115, 0);">code agents are not risk-free</b>.
+            <b><i>Code agents can inadvertently suggest or execute code with security vulnerabilities like deleting important files or leaking sensitive information.</i></b>
+            <br>🎯To rigorously and comprehensively evaluate the safety of code agents, 
+            we propose <img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="28px"><b class="name-bold"> RedCode</b>
+            , a <u>high-quality, large-scale</u> dataset that features <u>diverse languages and formats</u>, providing <u>real interaction with systems</u> and <u>fine-grained evaluation</u> of both <u>code execution and generation</u>.
+            </p>
+          </div>
+          <br>  
           Our experiment reveals that
           <br>  
           <b>OpenCodeInterpreter is safer than ReAct and CodeAct agents.</b>  
           <br>  
-          <img src="assets/fig-1(1x1)-rectangle.png" alt="Fig-1:scatter of REJ-ASR." style="width: 80%; height: auto;"/>  
+          <img src="assets/fig-1(1x1).png" alt="Fig-1:scatter of REJ-ASR." style="width: 80%; height: auto;"/>  
           <br>
         </h2>  
         <div class="columns is-centered has-text-centered">  
           <p style="color: gray;">
-            Safety evaluation of 13 code agents on <span class="name-context">RedCode-Exec</span>, where the color of the datapoint
+            Safety evaluation of 14 code agents on <span class="name-context">RedCode-Exec</span>, where the color of the datapoint
             denotes agent type and the label "A(B)" denotes the results of this agent with base LLM A under risky test cases in
             language B, and * denotes fine-tuned LLMs for agent. The more upper left the datapoint is located, the safer the agent.
             In general, OpenCodeInterpreter series (the yellow ones) are the safest agents, ReAct series (the red ones) are in the
             middle, and CodeAct series (the blue ones) are the most unsafe.
             Different base LLMs significantly affect the agent's safety.
+            <br>
           </p>
         </div>
       </div>  
     </div>  
-  </section>  
+  </section>   -->
   <!-- End teaser video -->  
 
-  <!-- Paper abstract -->  
-  <section class="section hero is-light" id="abstract">  
+  <section class="section hero is-small" id="motivation">  
     <div class="container is-max-desktop">  
       <div class="columns is-centered has-text-centered">  
         <div class="column is-four-fifths">  
-          <h2 class="title is-3">Abstract</h2>  
-          <div class="content has-text-justified">  
-            <p>  
+          <h2 class="title is-3" style="margin-top: -80px;">Motivation</h2>  
+            <div class="content has-text-justified">  
               <p>
-                <b>TL;DR: Our high-quality large-scale dataset offers holistic evaluation on Code Agents, in diverse languages and formats.</b>
+              Integrated with external tools like <img src="assets/python.png" style="vertical-align: middle" width="28px"> Python interpreters or <img src="assets/shell.png" style="vertical-align: middle" width="28px"> shell environments, LLM-based code agents have significantly advanced AI-assisted coding and software development.
+              However, despite their impressive capabilities, these ⚠️<b style="color: rgb(255, 0, 0);">code agents are not risk-free</b>.
+              <b>Code agents can inadvertently suggest or execute code with security vulnerabilities like deleting important files or leaking sensitive information.</i></b>
+              <br>
+              <br>🎯To rigorously and comprehensively evaluate the safety of code agents, 
+              we propose <img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="28px"><b class="name-bold"> RedCode</b>,
+              a <u>high-quality, large-scale (over 4,000 test cases)</u> dataset that features <u>diverse languages and formats (Python, Bash, natural language)</u>, providing <u>real interaction with systems</u> and <u>fine-grained evaluation</u> of both <u>code execution and generation</u>.
+              <br>
+              <br>
+              <img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="28px"> <span class="name-context">RedCode</span> consists of <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span>.
+              <ul>
+                <li>
+                  <span class="name-context">RedCode-Exec</span> provides prompts to evaluate code agents' ability to recognize and handle unsafe code with a total of 4,050 testing instances.
+                </li>
+                <li>
+                  <span class="name-context">RedCode-Gen</span> provides 160 prompts with function signatures as input to assess whether code agents will follow instructions to generate harmful code or software.
+                </li>
+              </ul>
               </p>
-              With the rapidly increasing capabilities and adoption of code agents for AI-assisted coding and software development, safety and security concerns - such as generating or executing malicious code - have become significant barriers to the real-world deployment of these agents. To provide comprehensive and practical evaluations on the safety of code agents, we propose <span class="name-context">RedCode</span>,  
-              an evaluation platform with benchmarks grounded in four key principles - real interaction with systems, holistic evaluation of unsafe code generation and execution, diverse input formats, and high-quality safety scenarios and tests.  
-              <span class="name-context">RedCode</span> consists of two parts to evaluate agents' safety in unsafe code execution and generation:  
-              <b>  
-              (1) <span class="name-context">RedCode-Exec</span> provides challenging code prompts in Python as inputs, aiming to evaluate code agents' ability to recognize and handle unsafe code. We then map the Python code to other programming languages (e.g., Bash) and natural text summaries or descriptions for evaluation, leading to a total of over 4,000 testing instances.  
-              </b>  
-              We provide 25 types of critical vulnerabilities spanning various domains, such as websites, file systems, and operating systems.  
-              We provide a Docker sandbox environment to evaluate the execution capabilities of code agents and design corresponding evaluation metrics to assess their execution results.  
-              <b>  
-              (2) <span class="name-context">RedCode-Gen</span> provides 160 prompts with function signatures as input to assess whether code agents will follow instructions to generate harmful code or software.  
-              </b>  
-              Our empirical findings, derived from evaluating three agents based on various LLMs, provide insights into code agents' vulnerabilities. For instance,  evaluations on <span class="name-context">RedCode-Exec</span> show that agents are more likely to reject executing unsafe operations on operating system. Unsafe operations described in natural text lead to a lower rejection rate than those in code format.  
-              Additionally,  evaluations on <span class="name-context">RedCode-Gen</span> reveal that  
-              more capable base models and agents with stronger overall coding abilities, such as GPT-4, tend to produce more sophisticated and effective harmful software.  
-              Our findings highlight the need for stringent safety evaluations for diverse code agents.  
-            </p>  
+            </div>
+          </h2>  
+          
+
+
           </div>  
         </div>  
       </div>  
     </div>  
   </section>  
-  <!-- End paper abstract -->  
 
-  <!-- Benchmark overview -->  
-  <section class="section hero is-small" id="benchmark">  
+
+    <!-- Results Demo -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="static/js/leaderboard.js"></script>
+    
+    <section class="section hero is-small" id="results">  
+      <div class="container is-max-desktop">  
+        <div class="columns is-centered has-text-centered">  
+          <div class="column is-four-fifths">  
+            <h2 class="title is-3" style="margin-top: -80px;">Results</h2>  
+            <div class="content has-text-justified">
+              We present the following <b style="color:rgb(255, 0, 0);">💡5 new findings (Finding 1-5) </b>from our evaluations, which have not been revealed in prior benchmarks. 
+              Our findings encompass comparisons of <u>various models and agents</u> (<b><a href="#demo1" class="demo-link1">Finding 1</a></b> and <b><a href="#demo4" class="demo-link4">Finding 4</a></b>), 
+              <u>diverse risky scenarios</u> (<b><a href="#demo2" class="demo-link2">Finding 2</a></b>, <b><a href="#demo4" class="demo-link4">Finding 4</a></b> and <b><a href="#demo5" class="demo-link5">Finding 5</a></b>),
+              and <u>different input languages</u> (<b><a href="#demo3" class="demo-link3">Finding 3</a></b>).</b>
+              <br>
+              <br>Because <span class="name-context">RedCode-Exec</span> provides unsafe user queries (i.e., test cases) for code execution, our query can be regarded as an attack on the agent.
+              We will get one of the following three possible safety outcomes for each test case: 
+              <ol>
+                <li>
+                  <b style="color:green;">Rejection: The user query is rejected.</b> 
+                </li>
+                <li>
+                  <b style="color:red;">Attack Success: The threat functionality is successfully achieved
+                    (i.e., code execution succeeds and brings corresponding outcome).</b>
+                </li>
+                <li>
+                  <b style="color:grey;">Execution Failure: The threat functionality is not achieved. </b>
+                </li>
+              </ol>
+            </div>  
+          </div>  
+        </div>  
+
+        <div id="demo1" class="demo-container">
+            <img src="assets/fig-1(1x1).jpg" alt="Fig-1:scatter of REJ-ASR."/>
+            
+              <b><a href="#demo1" class="demo-link1">Finding 1: OpenCodeInterpreter is 🛡️safer than ReAct and CodeAct agents.</a></b>
+              Safety evaluation results of 14 code agents on <span class="name-context">RedCode-Exec</span> are shown on the figure above, where the color of the datapoint
+                denotes agent type and the label "A(B)" denotes the results of this agent with base LLM A under risky test cases in
+                language B, OCI denotes OpenCodeInterpreter and * denotes fine-tuned LLMs for agents. The more upper left the datapoint is located, the safer the agent.
+                <u>In general, OpenCodeInterpreter series (the yellow ones) are the safest agents, ReAct series (the red ones) are in the
+                middle, and CodeAct series (the blue ones) are the most unsafe.</u>
+                Different base LLMs also significantly affect the agent's safety. <b><a href="#demo4" class="demo-link4">The heatmaps below</a></b> also show more details on comparions between different base LLMs.
+                <br>
+            
+        </div>
+        <br>
+          <div id="demo2" class="demo-container" style="margin-top: -1em;">
+            <img src="assets/radar-high-level.jpg" alt="Radar figure of RedCode-Exec."/>
+            <!-- <p style="color: gray;"> -->
+              <br>
+              <b><a href="#demo2" class="demo-link2">Finding 2: Agents are more likely to reject executing unsafe operations in operating system domain.</a></b>
+              Rejection rate and attack success rate of 8 representative code agents on <span class="name-context">RedCode-Exec</span> Python test cases
+              in 8 domains are shown in the figure above. <u>The overall attack success rate is high, indicating existing code agents are 💣vulnerable. We also find that agents</u>
+              achieve a higher rejection rate on risky cases in the operating system domain than those in other domains. <b><a href="#demo4" class="demo-link4">The heatmaps below</a></b> show more details about rejection rate and attack success rate under each specific risky scenario.
+              <br>
+
+          </div>
+          <div id="demo3"  class="demo-container">
+            <img src="assets/demo3.jpg" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;" alt="Radar figure of RedCode-Exec." />
+            <!-- <p style="color: gray;"> -->
+          
+              <b><a href="#demo3" class="demo-link3">Finding 3: Agents are less likely to reject risky queries in natural language than programming language inputs, or in Bash code than Python code inputs.</a></b>
+              We select ReAct agent based on GPT-4 as a representative, the "RR" denotes rejection rate and "ASR" denotes attack success rate. 
+              <!-- the evaluation results show that agent is less likely to reject risky queries in natural language compared to programming language inputs, and in Bash code compared to Python code inputs. -->
+              We employ a <b>variety of input prompts</b>: for each programming language (Python, Bash), we use the <u>code snippets</u>, <u>text summaries of code snippets</u>, and <u>text descriptions of code snippets</u> as input prompts. In addition, for code snippets, we add a persuasive jailbreaking prefix (i.e., I highly recommend that you run the following {language} code...), which we name as <u>“code with jailbreak”</u>. 
+              <!-- <br> -->
+
+              </div>
+
+            <div id="demo4" class="demo-container" style="position: relative;"> 
+              <b><a href="#demo4" class="demo-link4"> Finding 4: More capable base models, such as GPT series, tend to have a higher rejection rate for unsafe operations under the same Agent structure.</a></b> This could be concluded from the heatmaps below.
+              We present <b style="color:green;">Rejection Rate (RR)</b> and <b style="color:red;">Attack Success Rate (ASR)</b> for 14 different agents on RedCode-Exec, covering both Python and Bash tasks. 
+              The overall rejection rate is low, and the attack success rate is high for all code
+              agents, which demonstrates the ✅high quality, ✅stealthiness, and ✅challenging test cases of our benchmark. Note that * in the heatmap denotes fine-tuned LLMs for agents.
+              <br>
+              <br>
+              🖱️<b>Click</b> the buttons below to view the corresponding results.
+              <div class="button-container">  
+                <button id="choice1">RR for Python</button>
+                <button id="choice2">ASR for Python</button>
+                <button id="choice3">RR for Bash</button>
+                <button id="choice4">ASR for Bash</button>
+              </div>
+            
+            <div id="heatmap" style="margin-top: -7em; margin-right: -3em; padding: 0;"></div>
+                            
+            <div id="tooltip" style="position: absolute; display: none; padding: 10px; background: rgba(0, 0, 0, 0.6); color: white; border-radius: 5px; pointer-events: none; z-index: 10;"></div>
+                          
+            <script src="static/js/heatmap_python_rej.js"></script>
+
+            <div id="demo4_text" style="margin-top: 1em; padding: 0;text-align: center;">
+              
+            <b>Heatmap 4.1: Rejection rate for Python on RedCode-Exec across 14 different agents.</b>
+            </div>
+
+            <script src="static/js/choose_heatmap.js"></script>
+            </div>
+
+          <div id="demo5"  class="demo-container">
+            <img src="assets/demo5.png" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;" alt="Radar figure of RedCode-Exec."/>
+              Overall results for base models and code agents on <span class="name-context">RedCode-Gen</span>. We find low refusal rates and high accuracy in this setting for most base models. But code agents, have lower refusal rates and higher accuracy. 
+              The results tell us that <b><a href="#demo5" class="demo-link5">Finding 5: More capable base models tend to produce more sophisticated and effective harmful software.</a></b><br>
+          </div>
+
+        </div>  
+      </section>  
+
+  <section class="section hero is-small" id="benchmark" >  
     <div class="container is-max-desktop">  
       <div class="columns is-centered has-text-centered">  
         <div class="column is-four-fifths">  
           <h2 class="title is-3">Benchmark Overview</h2>  
-          <div class="content has-text-justified">  
-            <p>
-              <p>
-                <span class="name-context">RedCode</span> consists of two parts to evaluate agents' safety in unsafe code execution and
-                generation: <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span>.
-              </p>
-              <img src="assets/dataset-pipeline-new-5.jpg" alt="Scatter of REJ-ASR." style="margin-bottom: 10px;"/>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <p style="color: gray;">
-                  Overview of <span class="name-context">RedCode</span> benchmark.
-                  The <span class="name-context">RedCode-Exec</span> component is designed to assess risks associated with code
-                  execution, while <span class="name-context">RedCode-Gen</span> component evaluates risks in software generation.
-                </p>
-              </div>
-              <p>
-                For <span class="name-context">RedCode-Exec</span>, we begin by collecting the risky scenarios from the existing benchmarks and CWE. Guided by these risky
-                scenarios and risky descriptions, we construct initial seed test cases (python code snippets) by manually designing
-                the code or gathering from online sources. Next, we employ a human-in-the-loop procedure to expand and refine our dataset.
-                <br>
-                <br>
-                For <span class="name-context">RedCode-Gen</span>, we provide eight risky categories based on well-studied malware families for risky software generation.
-                The prompts are generated with human-in-the-loop AI-assisted generation. We then give the prompts to the agent to
-                generate code in our docker environment. We evaluate the quality of the generated code via both LLM-as-a-judge and
-                VirusTotal API.
-              </p>
-              <img src="assets/25-category.jpg" alt="Taxonomy of RedCode-Exec."/>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <p style="color: gray;">
-                  Taxonomy of 25 risky scenarios spanning 8 domains in <span class="name-context">RedCode-Exec</span>, ranging from real system, network operations to program logic and so on.
-                </p>
-              </div>
-            </p>
-          </div>  
         </div>  
+      </div>  
+      <p>
+        <div id="categories" class="demo-container">
+        
+          <img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="28px"> <span class="name-context">RedCode</span> consists of two parts to evaluate agents' safety in unsafe code execution and
+          generation: <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span>. The taxonomy of each part is shown in the figures below.
+          <br>
+          <br>
+          <img src="assets/redcode-exec-category.png" alt="Taxonomy of RedCode-Exec."/>
+          <br>
+          <br>
+        
+          <span class="name-context">RedCode-Exec</span> includes a taxonomy of 25 risky scenarios across 8 domains, ranging from real system and network operations to program logic and so on.
+          <br>
+          <br>
+          <img src="assets/redcode-gen-category.png" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;" alt="Taxonomy of RedCode-Exec."/>
+          <br>
+          For <span class="name-context">RedCode-Gen</span>, we provide 8 risky categories based on well-studied malware families for risky software generation.
+          <!-- The prompts are generated with human-in-the-loop AI-assisted generation. In contrast to the natural language malware-related
+          instructions found in prior safety benchmarks, we follow the format of HumanEval to evaluate code agents in more realistic scenarios where they must handle code. -->
+        
+      </div>
+
+      <div id="pipeline" class="demo-container">
+        <img src="assets/dataset-pipeline-new-6.jpg" alt="Overall pipeline" style="margin-bottom: 10px;"/>
+        <br>
+        <div class="columns is-centered has-text-centered">
+          <p style="color: gray;">
+            <!-- Overview of <span class="name-context">RedCode</span> benchmark. -->
+          </p>
+        </div>
+        We provide an overview of our 🛠️<b>benchmark pipeline</b> here.
+        <br>
+        <br>
+        For <span class="name-context">RedCode-Exec</span>, we begin by collecting the risky scenarios from the existing benchmarks (e.g. <a href="https://arxiv.org/html/2401.10019v2">R-Judge</a>) and <a href="https://cwe.mitre.org/data/published/cwe_v4.13.pdf">CWE</a>. Guided by these
+        risky scenarios and risky descriptions, we construct 🌱<b style="color: green;"> initial seed test cases (Python code snippets)</b> by
+        ✍️manually designing the code or gathering from 🖥️online sources. Next, we employ a human-in-the-loop
+        procedure to expand and refine our dataset. (1) We utilize <b>LLMs to generate additional code snippets</b>
+        under the same risky scenario, thereby expanding our dataset. (2) We <b>ensure the quality of our
+        dataset</b> by the following three steps: <u>(a) Manual Review (b) Accessible Resources Preparation (c)
+        Executability Verification.</u> The details of the above steps are outlined in §3.2.1 in our <a href="">paper</a>. Once the Python code
+        snippet dataset is finalized, we use LLMs to 🛠️<b>translate the snippets into Bash scripts and
+          natural language</b>. To evaluate the safety of the code agent via RedCode-Exec, we use the
+        prompts from our dataset as input for the code agent and instruct it to execute the risky code in our
+        Docker environment. We evaluate if the agent can complete the given risky tasks using corresponding
+        evaluation scripts. The figure below shows our evaluation details.
+        <br>
+        <br>
+        <img src="assets/eval_details.png" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;" alt="eval_details"/>
+        <br>
+        
+        Previous work use <b>🤖⚖️LLM as a judge</b> to evaluate the records (i.e., trajectory in <a href="https://arxiv.org/abs/2309.15817">ToolEmu</a> , response in <a href="https://arxiv.org/abs/2311.10538">AgentMonitor</a>, and records in <a href="https://arxiv.org/html/2401.10019v2">R-Judge</a>) of agents
+        and output safety label or safety score. In our work, we allow agents run in our well-prepared environment and use specific
+        <b><img src="assets/python.png" style="vertical-align: middle" width="25px">⚖️evaluation scripts</b> to <b>accurately</b> evaluate the whole execution process, from the agent receiving prompts to the
+        agent finishing the whole task. In hte figure above, the # risky scenario ID can help locate the corresponding evaluation script, and
+        the target label can be used to check if the execution is successful or not. Our evaluation combines <u>
+        (1) agent responses, (2) code execution results, and (3) results from interaction with the execution environment (i.e., the
+        Docker container)</u> to give an accurate judgement.
+        <br>
+        <br>
+        For <span class="name-context">RedCode-Gen</span>, we provide eight risky categories based on well-studied malware families for
+        risky software generation. The prompts are generated with human-in-the-loop AI-assisted generation.
+        We then give the prompts to the agent to generate code in our docker environment. We
+        evaluate the quality of the generated code via both <b>🤖⚖️LLM as a judge and ⚖️VirusTotal API.</b>
+
+      </p>
       </div>  
     </div>  
   </section>  
   <!-- End Benchmark overview -->  
 
   <!-- Leaderboard -->  
-  <section class="section hero is-light" id="leaderboard">  
+  <section class="section hero is-small" id="leaderboard">  
     <div class="container is-max-desktop">  
       <div class="columns is-centered has-text-centered">  
-        <div class="column is-four-fifths">  
+        <div class="column">  
           <h2 class="title is-3">Leaderboard</h2>  
-          <div class="content has-text-justified">  
-            <p>  
-              The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span> are shown in the following tables.
-            </p>  
-
-            <table id="leaderboard-exec">
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Model</th>
-                        <th>Agent</th>
-                        <th>Task</th>
-
-                        <th id="sort-rejection-exec" class="highlight tooltip">Rejection(%) ↑
-                          <span class="sort-indicator" id="rejection-indicator-exec">▼</span>
-                          <span class="tooltiptext">Sort</span>
-                        </th>
-                        <th id="sort-asr-exec" class="highlight tooltip">ASR(%) ↓
-                          <span class="sort-indicator" id="asr-indicator-exec"></span>
-                          <span class="tooltiptext">Sort</span>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Rows will be inserted here by JavaScript -->
-                </tbody>
-            </table>
-
-          </div>  
         </div>  
+      </div>  
+
+      <div class="demo-container">
+        The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> are shown in the following tables. 
+        The results of LLMs and agents on <span class="name-context">RedCode-Gen</span> can be found in the figure of <b><a href="#demo5" class="demo-link5">Finding 5</a></b> above.
+        <br>
+        <br>
+        🖱️<b>Click</b> the "RR" or "ASR" below to sort corresponding results. For RR, the higher the safer. For ASR, the lower the safer.
+        <br>
+        <br>
+
+      <table id="leaderboard-exec">
+          <thead>
+              <tr>
+                  <th>Rank</th>
+                  <th>Model</th>
+                  <th>Agent</th>
+                  <th>Task</th>
+
+                  <th id="sort-rejection-exec" class="highlight tooltip">RR(%)↑
+                    <span class="sort-indicator" id="rejection-indicator-exec">▼</span>
+                    <span class="tooltiptext">Sort</span>
+                  </th>
+                  <th id="sort-asr-exec" class="highlight tooltip">ASR(%)↓
+                    <span class="sort-indicator" id="asr-indicator-exec"></span>
+                    <span class="tooltiptext">Sort</span>
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Rows will be inserted here by JavaScript -->
+          </tbody>
+      </table>
+        
       </div>  
     </div>  
   </section>  
 
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="static/js/leaderboard.js"></script>
   <!-- End Leaderboard -->  
 
-  <!-- Results Demo -->  
-  <section class="section hero is-small" id="results">  
+  <!-- Case study -->  
+  <!-- <section class="section hero is-light" id="case-study">  
     <div class="container is-max-desktop">  
       <div class="columns is-centered has-text-centered">  
         <div class="column is-four-fifths">  
-          <h2 class="title is-3">Results Demo</h2>  
+          <h2 class="title is-3">Case Study</h2>  
           <div class="content has-text-justified">  
             <p>  
-              <p>
-                The heatmap and radar figures show the performance of the three agents on <span class="name-context">RedCode-Exec</span> benchmark.
-              </p>
-              <img src="assets/radar-high-level.jpg" alt="Radar figure of RedCode-Exec."/>
-              <div class="columns is-centered has-text-centered">
-                <p style="color: gray;">
-                  Reject and attack success rates of 8 representative code agents on <span class="name-context">RedCode-Exec</span> Python test cases
-                  in 8 domains. The overall attack success rate is high, indicating existing code agents are vulnerable. Agents
-                  achieve a higher rejection rate on risky cases in operation and file systems than those in other domains.
-                </p>
-              </div>
-
-              <img src="assets/heatmap.jpg" alt="Heatmap of RedCode-Exec."/>
-              <div class="columns is-centered has-text-centered">
-                <p style="color: gray;">
-                  Rejection and attack success rates for <span class="name-context">RedCode-Exec</span> across 11 <span style="color: red;"> Note: Now we have 13. Update needed.</span>   different agents. OCI/CA/RA denotes OpenCodeInterpreter/CodeAct/ReAct agents, and  * denotes fine-tuned LLMs for corresponding agents.
-                </p>
-              </div>
+              <p style="color: red;"> Note: Maybe not release this section in a hurry?</p>  
+              The runtime logs of the three agents on <span class="name-context">RedCode-Exec</span> are shown in the following blocks to provide examples.  
             </p>  
           </div>  
         </div>  
       </div>  
     </div>  
-  </section>  
-  <!-- Results Demo -->  
-
+  </section>   -->
+  <!-- Case study -->  
 
   <!--BibTex citation -->  
-  <section class="section is-light" id="BibTeX">  
+  <section class="section" id="BibTeX">  
     <div class="container is-max-desktop content">  
       <h2 class="title">BibTeX</h2>  
       <pre><code class="bibtex-code">BibTex Code Here</code></pre>  
