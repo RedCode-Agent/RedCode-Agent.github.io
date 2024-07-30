@@ -6,147 +6,190 @@ document.addEventListener("DOMContentLoaded", function() {
             task: "Python",
             rejection: 12.47,
             asr: 58.43
-        },
-        {
+},
+{
             model: "codellama-7b-instruct-hf",
             agent: "ReAct",
             task: "Bash",
             rejection: 16.54,
             asr: 56.21
-        },
-        {
+},
+{
             model: "codellama-13b-instruct-hf",
             agent: "ReAct",
             task: "Python",
             rejection: 19.50,
             asr: 60.13
-        },
-        {
+},
+{
             model: "codellama-13b-instruct-hf",
             agent: "ReAct",
             task: "Bash",
             rejection: 15.25,
             asr: 65.25
-        },
-        {
+},
+{
             model: "deepseek-coder-6.7b-instruct",
             agent: "ReAct",
             task: "Python",
             rejection: 8.30,
             asr: 80.23
-        },
-        {
+},
+{
             model: "deepseek-coder-6.7b-instruct",
             agent: "ReAct",
             task: "Bash",
             rejection: 8.00,
             asr: 73.17
-        },
-        {
+},
+{
             model: "gpt-3.5-turbo-1106",
             agent: "ReAct",
             task: "Python",
             rejection: 16.60,
             asr: 76.23
-        },
-        {
+},
+{
             model: "gpt-3.5-turbo-1106",
             agent: "ReAct",
             task: "Bash",
             rejection: 13.50,
             asr: 70.38
-        },
-        {
+},
+{
             model: "gpt-4-1106-preview",
             agent: "ReAct",
             task: "Python",
             rejection: 28.90,
             asr: 64.50
-        },
-        {
+},
+{
             model: "gpt-4-1106-preview",
             agent: "ReAct",
             task: "Bash",
             rejection: 22.79,
             asr: 61.96
-        },
-        {
+},
+{
+            model: "deepseek-coder-v2-lite-instruct",
+            agent: "ReAct",
+            task: "Python",
+            rejection: 12.87,
+            asr: 79.77
+},
+{
+            model: "deepseek-coder-v2-lite-instruct",
+            agent: "ReAct",
+            task: "Bash",
+            rejection: 17.04,
+            asr: 68.42
+},
+{
             model: "gpt-4o-2024-05-13",
             agent: "ReAct",
             task: "Python",
             rejection: 16.57,
             asr: 77.23
-        },
-        {
+},
+{
             model: "gpt-4o-2024-05-13",
             agent: "ReAct",
             task: "Bash",
             rejection: 11.54,
             asr: 72.83
-        },
-        {
+},
+{
+            model: "meta-llama-3-8b-instruct",
+            agent: "ReAct",
+            task: "Bash",
+            rejection: 14.79,
+            asr: 62.25
+},
+{
+            model: "meta-llama-3-8b-instruct",
+            agent: "ReAct",
+            task: "Python",
+            rejection: 15.80,
+            asr: 42.50
+},
+{
+            model: "codeqwen1.5-7b-chat",
+            agent: "ReAct",
+            task: "Python",
+            rejection: 7.67,
+            asr: 77.57
+},
+{
+            model: "codeqwen1.5-7b-chat",
+            agent: "ReAct",
+            task: "Bash",
+            rejection: 10.25,
+            asr: 71.92
+},
+{
+            model: "meta-llama-3.1-8b-instruct",
+            agent: "ReAct",
+            task: "Python",
+            rejection: 27.17,
+            asr: 62.87
+},
+{
+            model: "meta-llama-3.1-8b-instruct",
+            agent: "ReAct",
+            task: "Bash",
+            rejection: 22.79,
+            asr: 59.83
+},
+{
             model: "codellama-7b-instruct-hf",
             agent: "CodeAct",
             task: "Python",
             rejection: 10.50,
             asr: 61.83
-        },
-        {
+},
+{
             model: "codellama-13b-instruct-hf",
             agent: "CodeAct",
             task: "Python",
             rejection: 12.13,
             asr: 71.87
-        },
-        {
+},
+{
             model: "mistral-7b-v0.1*",
             agent: "CodeAct",
             task: "Python",
             rejection: 6.57,
             asr: 62.60
-        },
-        {
+},
+{
             model: "llama-2-7b*",
             agent: "CodeAct",
             task: "Python",
             rejection: 3.34,
             asr: 69.95
-        },
-        {
+},
+{
             model: "codellama-7b-instruct-hf*",
             agent: "OCI",
             task: "Python",
             rejection: 21.87,
             asr: 46.80
-        },
-        {
+},
+{
             model: "codellama-13b-instruct-hf*",
             agent: "OCI",
             task: "Python",
             rejection: 30.13,
             asr: 49.07
-        },
-        {
+},
+{
             model: "deepseek-coder-6.7b-instruct*",
             agent: "OCI",
             task: "Python",
             rejection: 30.80,
             asr: 48.87
-        },
-        {
-            model: "llama-3-8b-instruct",
-            agent: "ReAct",
-            task: "Bash",
-            rejection: 14.79,
-            asr: 62.25
-        },
-        {
-            model: "llama-3-8b-instruct",
-            agent: "ReAct",
-            task: "Python",
-            rejection: 15.80,
-            asr: 42.50
-        },
+},
+
     ];
 
     const rejectionIndicator = document.getElementById("rejection-indicator-exec");

@@ -139,8 +139,8 @@ function renderHeatmap(filteredData) {
   clientWidth = container.clientWidth
   unitWidth = clientWidth / 900
   const svgWidth = 900 * unitWidth; // Maintain width for better label spacing
-  const svgHeight = 300 * unitWidth;
-  const labelPadding = 210 * unitWidth; // Space for y-axis labels; start x position of the heatmap grids
+  const svgHeight = 100 * unitWidth;
+  const labelPadding = 0 * unitWidth; // Space for y-axis labels; start x position of the heatmap grids
   const cellWidth = (svgWidth - labelPadding) / selectedCategories.length; // Adjust cell width to fit labels
   const cellHeight = 20 * unitWidth;
   const xLabelPadding = 130 * unitWidth; // Padding for x-axis labels

@@ -11,55 +11,87 @@ var all_categories = [
   
 
 var data = [      
-{
-      model: "deepseek-coder-6.7b-instruct",
-      agent: "ReAct",
-task: "Bash",
-rej: [4.17, 4.17, 26.67, 19.17, 1.67, 10.0, 4.17, 29.17, 15.83, 1.67, 5.0, 0.83, 2.5, 2.5, 4.17, 6.67, 15.83, 5.0, 0.83, 0.0],
-categories: all_categories,
+  {
+    model: "codellama-7b-instruct-hf",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [60.83, 90.83, 67.5, 59.17, 88.33, 37.5, 87.5, 57.5, 24.17, 73.33, 81.67, 44.17, 35.83, 54.17, 51.67, 41.67, 56.67, 30.0, 34.17, 47.5],
+    rej: [0.83, 1.67, 15.0, 38.33, 10.0, 35.83, 6.67, 21.67, 10.0, 7.5, 13.33, 22.5, 23.33, 14.17, 4.17, 10.0, 25.83, 34.17, 25.83, 10.0],
+    categories: all_categories,
 },
 {
-      model: "gpt-3.5-turbo-1106",
-      agent: "ReAct",
-task: "Bash",
-rej: [2.5, 27.5, 33.33, 8.33, 0.83, 5.83, 11.67, 42.5, 75.0, 0.83, 20.0, 7.5, 10.0, 6.67, 0.0, 1.67, 15.0, 0.83, 0.0, 0.0],
-categories: all_categories,
+    model: "codellama-13b-instruct-hf",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [70.83, 83.33, 90.83, 97.5, 82.5, 40.83, 86.67, 82.5, 58.33, 69.17, 77.5, 42.5, 18.33, 65.83, 55.83, 50.0, 59.17, 65.0, 63.33, 45.0],
+    rej: [4.17, 11.67, 5.83, 1.67, 17.5, 25.0, 13.33, 17.5, 40.0, 12.5, 15.0, 30.83, 21.67, 12.5, 20.0, 1.67, 13.33, 19.17, 15.83, 5.83],
+    categories: all_categories,
 },
 {
-      model: "gpt-4-1106-preview",
-      agent: "ReAct",
-task: "Bash",
-rej: [26.67, 37.5, 57.5, 13.33, 0.0, 20.83, 10.83, 45.83, 97.5, 15.83, 11.67, 6.67, 0.0, 8.33, 24.17, 2.5, 76.67, 0.0, 0.0, 0.0],
-categories: all_categories,
+    model: "deepseek-coder-6.7b-instruct",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [76.67, 95.0, 73.33, 80.83, 89.17, 48.33, 91.67, 55.0, 84.17, 80.0, 72.5, 85.83, 60.83, 71.67, 62.5, 57.5, 60.0, 81.67, 84.17, 52.5],
+    rej: [4.17, 4.17, 26.67, 19.17, 1.67, 10.0, 4.17, 29.17, 15.83, 1.67, 5.0, 0.83, 2.5, 2.5, 4.17, 6.67, 15.83, 5.0, 0.83, 0.0],
+    categories: all_categories,
 },
 {
-      model: "gpt-4o-2024-05-13",
-      agent: "ReAct",
-task: "Bash",
-rej: [3.33, 20.0, 59.17, 1.67, 0.0, 5.0, 4.17, 35.83, 90.83, 0.0, 2.5, 1.67, 0.0, 3.33, 2.5, 0.0, 0.83, 0.0, 0.0, 0.0],
-categories: all_categories,
+    model: "gpt-3.5-turbo-1106",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [73.33, 72.5, 66.67, 91.67, 99.17, 58.33, 88.33, 57.5, 25.0, 87.5, 71.67, 83.33, 52.5, 70.83, 55.0, 65.0, 61.67, 90.0, 85.83, 51.67],
+    rej: [2.5, 27.5, 33.33, 8.33, 0.83, 5.83, 11.67, 42.5, 75.0, 0.83, 20.0, 7.5, 10.0, 6.67, 0.0, 1.67, 15.0, 0.83, 0.0, 0.0],
+    categories: all_categories,
 },
 {
-      model: "codellama-7b-instruct-hf",
-      agent: "ReAct",
-task: "Bash",
-rej: [0.83, 1.67, 15.0, 38.33, 10.0, 35.83, 6.67, 21.67, 10.0, 7.5, 13.33, 22.5, 23.33, 14.17, 4.17, 10.0, 25.83, 34.17, 25.83, 10.0],
-categories: all_categories,
+    model: "gpt-4-1106-preview",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [48.33, 60.0, 42.5, 86.67, 98.33, 44.17, 89.17, 54.17, 2.5, 72.5, 76.67, 91.67, 40.0, 81.67, 45.0, 60.83, 15.0, 88.33, 85.0, 56.67],
+    rej: [26.67, 37.5, 57.5, 13.33, 0.0, 20.83, 10.83, 45.83, 97.5, 15.83, 11.67, 6.67, 0.0, 8.33, 24.17, 2.5, 76.67, 0.0, 0.0, 0.0],
+    categories: all_categories,
 },
 {
-      model: "codellama-13b-instruct-hf",
-      agent: "ReAct",
-task: "Bash",
-rej: [4.17, 11.67, 5.83, 1.67, 17.5, 25.0, 13.33, 17.5, 40.0, 12.5, 15.0, 30.83, 21.67, 12.5, 20.0, 1.67, 13.33, 19.17, 15.83, 5.83],
-categories: all_categories,
+    model: "deepseek-coder-v2-lite-instruct",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [74.17, 92.5, 45.83, 88.33, 87.5, 62.5, 78.33, 58.33, 81.67, 87.5, 61.67, 95.0, 53.33, 68.33, 53.33, 61.67, 5.0, 82.5, 79.17, 51.67],
+    rej: [10.0, 0.83, 54.17, 10.83, 10.0, 2.5, 21.67, 40.0, 15.0, 4.17, 35.83, 2.5, 9.17, 16.67, 5.0, 6.67, 83.33, 2.5, 6.67, 3.33],
+    categories: all_categories,
 },
 {
-  model: "llama-3-8b-instruct",
-  agent: "ReAct",
-task: "Bash",
-rej: [3.33, 19.17, 20.0, 2.5, 6.67, 9.17, 15.0, 24.17, 65.83, 3.33, 12.5, 15.0, 9.17, 21.67, 11.67, 0.83, 18.33, 5.0, 15.83, 16.67],
-categories: all_categories,
+    model: "gpt-4o-2024-05-13",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [72.5, 74.17, 40.83, 98.33, 99.17, 60.0, 95.83, 64.17, 9.17, 93.33, 91.67, 96.67, 47.5, 83.33, 61.67, 67.5, 65.0, 92.5, 85.83, 57.5],
+    rej: [3.33, 20.0, 59.17, 1.67, 0.0, 5.0, 4.17, 35.83, 90.83, 0.0, 2.5, 1.67, 0.0, 3.33, 2.5, 0.0, 0.83, 0.0, 0.0, 0.0],
+    categories: all_categories,
 },
+{
+    model: "meta-llama-3-8b-instruct",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [59.17, 39.17, 75.0, 79.17, 79.17, 63.33, 70.83, 71.67, 34.17, 86.67, 56.67, 77.5, 56.67, 60.0, 47.5, 55.83, 57.5, 75.0, 63.33, 36.67],
+    rej: [3.33, 19.17, 20.0, 2.5, 6.67, 9.17, 15.0, 24.17, 65.83, 3.33, 12.5, 15.0, 9.17, 21.67, 11.67, 0.83, 18.33, 5.0, 15.83, 16.67],
+    categories: all_categories,
+},
+{
+    model: "codeqwen1.5-7b-chat",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [60.0, 92.5, 70.83, 91.67, 99.17, 54.17, 85.0, 97.5, 90.0, 70.83, 63.33, 84.17, 52.5, 75.83, 55.83, 60.0, 50.0, 65.83, 67.5, 51.67],
+    rej: [15.83, 0.0, 29.17, 6.67, 0.83, 2.5, 13.33, 1.67, 0.83, 1.67, 8.33, 9.17, 27.5, 6.67, 10.0, 7.5, 25.0, 10.83, 14.17, 13.33],
+    categories: all_categories,
+},
+{
+    model: "meta-llama-3.1-8b-instruct",
+    agent: "ReAct",
+    task: "Bash",
+    asr: [65.83, 60.0, 40.83, 80.83, 90.83, 43.33, 90.83, 70.83, 30.83, 83.33, 69.17, 73.33, 26.67, 73.33, 56.67, 35.0, 45.83, 70.83, 48.33, 40.0],
+    rej: [15.83, 33.33, 55.0, 16.67, 9.17, 18.33, 9.17, 27.5, 61.67, 3.33, 21.67, 20.83, 32.5, 15.0, 12.5, 22.5, 32.5, 6.67, 34.17, 7.5],
+    categories: all_categories,
+},
+
 
 ];      
 
@@ -101,7 +133,7 @@ var container = document.getElementById('heatmap'); // Get the container
 clientWidth = container.clientWidth;      
 unitWidth = clientWidth / 800;      
 var svgWidth = 800 * unitWidth; // Maintain width for better label spacing      
-var svgHeight = 350 * unitWidth;      
+var svgHeight = 290 * unitWidth;      
 var labelPadding = 270 * unitWidth; // Space for y-axis labels; start x position of the heatmap grids      
 var cellWidth = (svgWidth - labelPadding) / selectedCategories.length - 2.4; // Adjust cell width to fit labels      
 var cellHeight = 20 * unitWidth;      
@@ -153,7 +185,7 @@ var cells = rows
 cells      
   .append("rect")      
   .attr("x", (d, i) => i * cellWidth)      
-  .attr("y", cellHeight + xLabelPadding)      
+  .attr("y", cellHeight)      
   .attr("width", cellWidth - 0 * unitWidth) // Some padding between cells      
   .attr("height", cellHeight)      
   .attr('fill', d => colorScale((d.score / 100).toFixed(1) * 100));  // Apply color scale based on score      
@@ -162,7 +194,7 @@ cells
 cells      
   .append("text")      
   .attr("x", (d, i) => i * cellWidth + 1 * cellWidth / 2)   // Center text in the middle of the cell      
-  .attr("y", 3 * cellHeight / 2 + xLabelPadding) // Center text vertically in the cell      
+  .attr("y", 3 * cellHeight / 2) // Center text vertically in the cell      
   .attr("dy", `${0.4 * unitWidth}em`) // Vertical alignment for good typographic alignment      
   .attr("text-anchor", "middle") // Center the text horizontally      
   .text((d) => d.score.toFixed(0)) // Round the score to two decimal places      
@@ -278,14 +310,14 @@ yLabels
   .append("text")      
   .attr("class", "y-label")      
   .attr("x", labelXPosition + 60 * unitWidth)      
-  .attr("y", (d, i) => (i + 2.7) * cellHeight + xLabelPadding)      
+  .attr("y", (d, i) => (i + 2.7) * cellHeight)      
   .text((d) => d.model);      
 
 yLabels      
   .append("text")      
   .attr("class", "agent")      
   .attr("x", labelXPosition + 0 * unitWidth) // Offset to display agent next to model name      
-  .attr("y", (d, i) => (i + 2.7) * cellHeight + xLabelPadding)      
+  .attr("y", (d, i) => (i + 2.7) * cellHeight)      
   .text((d) => `${d.agent}`)   
   .style("font-weight", "bold");      
 
@@ -293,7 +325,7 @@ yLabels
   .append("text")      
   .attr("class", "average-score")      
   .attr("x", labelXPosition + 210 * unitWidth) // Offset to display average next to agent      
-  .attr("y", (d, i) => (i + 2.7) * cellHeight + xLabelPadding)      
+  .attr("y", (d, i) => (i + 2.7) * cellHeight)      
   .text((d) => `(Avg: ${d.average.toFixed(0)})`)      
   .style("font-weight", "bold");      
 

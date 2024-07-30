@@ -10,102 +10,140 @@ var all_categories = [
 ]
 
 var data = [      
-    {
-        model: "codellama-7b-instruct-hf",
-        agent: "ReAct",
-        task: "Python",
-        asr: [98.33, 84.17, 91.67, 92.5, 94.17, 1.67, 94.17, 21.67, 23.33, 1.67, 67.5, 77.5, 82.5, 35.83, 38.33, 64.17, 75.0, 63.33, 73.33, 65.83, 73.33, 21.67, 16.67, 54.17, 48.33],
-        categories: all_categories,
+  {
+    model: "codellama-7b-instruct-hf",
+    agent: "ReAct",
+    task: "Python",
+    asr: [98.33, 84.17, 91.67, 92.5, 94.17, 1.67, 94.17, 21.67, 23.33, 1.67, 67.5, 77.5, 82.5, 35.83, 38.33, 64.17, 75.0, 63.33, 73.33, 65.83, 73.33, 21.67, 16.67, 54.17, 48.33],
+    rej: [0.83, 10.0, 6.67, 6.67, 3.33, 10.0, 1.67, 60.0, 6.67, 9.17, 15.83, 9.17, 6.67, 5.83, 20.0, 8.33, 5.83, 4.17, 12.5, 12.5, 7.5, 31.67, 30.0, 25.83, 0.83],
+    categories: all_categories,
 },
 {
-        model: "codellama-13b-instruct-hf",
-        agent: "ReAct",
-        task: "Python",
-        asr: [100.0, 90.0, 77.5, 100.0, 79.17, 76.67, 82.5, 93.33, 50.83, 1.67, 63.33, 57.5, 82.5, 25.0, 41.67, 63.33, 40.0, 84.17, 50.83, 63.33, 64.17, 11.67, 41.67, 35.0, 27.5],
-        categories: all_categories,
+    model: "codellama-13b-instruct-hf",
+    agent: "ReAct",
+    task: "Python",
+    asr: [100.0, 90.0, 77.5, 100.0, 79.17, 76.67, 82.5, 93.33, 50.83, 1.67, 63.33, 57.5, 82.5, 25.0, 41.67, 63.33, 40.0, 84.17, 50.83, 63.33, 64.17, 11.67, 41.67, 35.0, 27.5],
+    rej: [0.0, 4.17, 22.5, 0.0, 20.83, 20.83, 16.67, 6.67, 45.0, 4.17, 18.33, 8.33, 17.5, 58.33, 35.0, 15.83, 37.5, 2.5, 32.5, 12.5, 8.33, 25.0, 19.17, 50.83, 5.0],
+    categories: all_categories,
 },
 {
-        model: "deepseek-coder-6.7b-instruct",
-        agent: "ReAct",
-        task: "Python",
-        asr: [100.0, 99.17, 68.33, 94.17, 95.0, 91.67, 90.0, 55.83, 58.33, 24.17, 77.5, 89.17, 80.0, 88.33, 70.0, 80.83, 83.33, 81.67, 74.17, 83.33, 79.17, 85.83, 81.67, 88.33, 85.83],
-        categories: all_categories,
+    model: "deepseek-coder-6.7b-instruct",
+    agent: "ReAct",
+    task: "Python",
+    asr: [100.0, 99.17, 68.33, 94.17, 95.0, 91.67, 90.0, 55.83, 58.33, 24.17, 77.5, 89.17, 80.0, 88.33, 70.0, 80.83, 83.33, 81.67, 74.17, 83.33, 79.17, 85.83, 81.67, 88.33, 85.83],
+    rej: [0.0, 0.83, 30.83, 2.5, 3.33, 1.67, 6.67, 44.17, 36.67, 30.83, 1.67, 0.0, 15.83, 11.67, 2.5, 3.33, 0.0, 0.83, 0.83, 0.83, 4.17, 3.33, 2.5, 2.5, 0.0],
+    categories: all_categories,
 },
 {
-        model: "gpt-3.5-turbo-1106",
-        agent: "ReAct",
-        task: "Python",
-        asr: [80.0, 85.0, 60.83, 93.33, 97.5, 75.0, 85.0, 51.67, 47.5, 0.83, 85.0, 88.33, 76.67, 49.17, 56.67, 85.83, 85.0, 80.0, 85.0, 85.0, 88.33, 90.83, 100.0, 84.17, 89.17],
-        categories: all_categories,
+    model: "gpt-3.5-turbo-1106",
+    agent: "ReAct",
+    task: "Python",
+    asr: [80.0, 85.0, 60.83, 93.33, 97.5, 75.0, 85.0, 51.67, 47.5, 0.83, 85.0, 88.33, 76.67, 49.17, 56.67, 85.83, 85.0, 80.0, 85.0, 85.0, 88.33, 90.83, 100.0, 84.17, 89.17],
+    rej: [14.17, 10.83, 39.17, 6.67, 0.0, 12.5, 15.0, 48.33, 51.67, 84.17, 15.0, 0.0, 22.5, 48.33, 0.83, 6.67, 4.17, 17.5, 3.33, 0.83, 3.33, 1.67, 0.0, 8.33, 0.0],
+    categories: all_categories,
 },
 {
-        model: "gpt-4-1106-preview",
-        agent: "ReAct",
-        task: "Python",
-        asr: [56.67, 66.67, 30.83, 76.67, 96.67, 80.83, 82.5, 44.17, 3.33, 2.5, 60.83, 75.83, 75.0, 28.33, 45.0, 90.83, 74.17, 59.17, 86.67, 83.33, 46.67, 89.17, 95.0, 74.17, 87.5],
-        categories: all_categories,
+    model: "gpt-4-1106-preview",
+    agent: "ReAct",
+    task: "Python",
+    asr: [56.67, 66.67, 30.83, 76.67, 96.67, 80.83, 82.5, 44.17, 3.33, 2.5, 60.83, 75.83, 75.0, 28.33, 45.0, 90.83, 74.17, 59.17, 86.67, 83.33, 46.67, 89.17, 95.0, 74.17, 87.5],
+    rej: [43.33, 33.33, 69.17, 23.33, 0.0, 18.33, 17.5, 55.83, 96.67, 92.5, 35.83, 17.5, 25.0, 71.67, 0.0, 7.5, 5.83, 38.33, 0.0, 1.67, 49.17, 0.0, 0.0, 20.0, 0.0],
+    categories: all_categories,
 },
 {
-        model: "gpt-4o-2024-05-13",
-        agent: "ReAct",
-        task: "Python",
-        asr: [80.0, 91.67, 27.5, 97.5, 96.67, 86.67, 92.5, 60.0, 20.0, 10.0, 93.33, 89.17, 94.17, 50.0, 63.33, 93.33, 85.0, 95.0, 83.33, 87.5, 72.5, 94.17, 100.0, 80.0, 87.5],
-        categories: all_categories,
+    model: "deepseek-coder-v2-lite-instruct",
+    agent: "ReAct",
+    task: "Python",
+    asr: [97.5, 93.33, 40.0, 93.33, 99.17, 92.5, 84.17, 50.0, 80.83, 36.67, 86.67, 90.83, 74.17, 94.17, 59.17, 85.0, 65.0, 85.0, 82.5, 88.33, 78.33, 80.0, 83.33, 89.17, 85.0],
+    rej: [1.67, 0.0, 60.0, 6.67, 0.83, 4.17, 15.83, 50.0, 18.33, 44.17, 8.33, 0.0, 25.0, 5.83, 6.67, 7.5, 24.17, 2.5, 0.83, 0.0, 20.83, 5.83, 8.33, 4.17, 0.0],
+    categories: all_categories,
 },
 {
-        model: "codellama-7b-instruct-hf",
-        agent: "CodeAct",
-        task: "Python",
-        asr: [94.17, 47.5, 81.67, 83.33, 72.5, 61.67, 72.5, 53.33, 24.17, 14.17, 65.0, 75.0, 56.67, 25.0, 36.67, 79.17, 67.5, 50.83, 74.17, 61.67, 60.0, 78.33, 72.5, 69.17, 69.17],
-        categories: all_categories,
+    model: "gpt-4o-2024-05-13",
+    agent: "ReAct",
+    task: "Python",
+    asr: [80.0, 91.67, 27.5, 97.5, 96.67, 86.67, 92.5, 60.0, 20.0, 10.0, 93.33, 89.17, 94.17, 50.0, 63.33, 93.33, 85.0, 95.0, 83.33, 87.5, 72.5, 94.17, 100.0, 80.0, 87.5],
+    rej: [20.0, 1.67, 72.5, 2.5, 0.0, 10.83, 7.5, 40.0, 80.0, 72.5, 5.0, 3.33, 5.83, 50.0, 0.0, 3.33, 0.0, 2.5, 0.0, 0.0, 24.17, 0.0, 0.0, 12.5, 0.0],
+    categories: all_categories,
 },
 {
-        model: "codellama-13b-instruct-hf",
-        agent: "CodeAct",
-        task: "Python",
-        asr: [71.67, 75.83, 92.5, 49.17, 91.67, 90.83, 77.5, 55.83, 23.33, 13.33, 72.5, 88.33, 76.67, 24.17, 55.83, 91.67, 84.17, 90.0, 85.0, 83.33, 74.17, 79.17, 89.17, 77.5, 83.33],
-        categories: all_categories,
-},
-{
-        model: "mistral-7b-v0.1*",
-        agent: "CodeAct",
-        task: "Python",
-        asr: [59.17, 72.5, 70.83, 87.5, 87.5, 4.17, 70.0, 57.5, 28.33, 7.5, 69.17, 90.83, 55.83, 68.33, 53.33, 80.83, 60.0, 42.5, 69.17, 50.83, 74.17, 85.0, 75.83, 70.83, 73.33],
-        categories: all_categories,
-},
-{
-        model: "llama-2-7b*",
-        agent: "CodeAct",
-        task: "Python",
-        asr: [93.33, 87.5, 99.17, 97.5, 85.83, 70.83, 70.54, 90.83, 85.0, 5.0, 69.17, 83.33, 77.5, 58.33, 36.67, 79.17, 54.17, 43.33, 65.83, 48.33, 65.0, 82.5, 65.0, 72.5, 62.5],
-        categories: all_categories,
-},
-{
-        model: "codellama-7b-instruct-hf*",
-        agent: "OCI",
-        task: "Python",
-        asr: [53.33, 51.67, 41.67, 63.33, 46.67, 62.5, 53.33, 25.0, 31.67, 5.0, 26.67, 83.33, 41.67, 0.83, 38.33, 76.67, 39.17, 0.0, 45.0, 40.83, 56.67, 84.17, 77.5, 65.0, 60.0],
-        categories: all_categories,
-},
-{
-        model: "codellama-13b-instruct-hf*",
-        agent: "OCI",
-        task: "Python",
-        asr: [60.83, 59.17, 54.17, 81.67, 45.0, 45.83, 45.0, 24.17, 44.17, 4.17, 24.17, 85.0, 36.67, 0.83, 33.33, 78.33, 55.0, 0.0, 62.5, 51.67, 47.5, 83.33, 73.33, 65.83, 65.0],
-        categories: all_categories,
-},
-{
-        model: "deepseek-coder-6.7b-instruct*",
-        agent: "OCI",
-        task: "Python",
-        asr: [50.0, 50.0, 52.5, 69.17, 43.33, 66.67, 42.5, 24.17, 25.83, 0.0, 10.0, 54.17, 39.17, 0.0, 49.17, 80.83, 66.67, 0.0, 74.17, 61.67, 47.5, 91.67, 83.33, 67.5, 71.67],
-        categories: all_categories,
-},
-{
-    model: "llama-3-8b-instruct",
+    model: "meta-llama-3-8b-instruct",
     agent: "ReAct",
     task: "Python",
     asr: [86.67, 68.33, 37.5, 55.83, 46.67, 50.83, 50.83, 49.17, 30.83, 1.67, 49.17, 38.33, 40.0, 57.5, 20.0, 42.5, 16.67, 74.17, 19.17, 25.0, 40.0, 45.83, 48.33, 37.5, 30.0],
+    rej: [3.33, 20.0, 14.17, 17.5, 0.83, 27.5, 6.67, 45.83, 55.0, 36.67, 10.83, 3.33, 45.83, 41.67, 2.5, 4.17, 9.17, 0.83, 1.67, 5.0, 6.67, 8.33, 5.0, 21.67, 0.83],
+    categories: all_categories,
+},
+{
+    model: "codeqwen1.5-7b-chat",
+    agent: "ReAct",
+    task: "Python",
+    asr: [80.83, 70.0, 75.0, 90.0, 99.17, 90.0, 93.33, 89.17, 92.5, 1.67, 75.83, 78.33, 90.83, 100.0, 62.5, 86.67, 35.0, 80.0, 80.0, 82.5, 88.33, 70.0, 73.33, 85.0, 69.17],
+    rej: [0.0, 22.5, 5.0, 0.83, 0.0, 0.0, 6.67, 1.67, 0.83, 37.5, 10.83, 1.67, 9.17, 0.0, 5.0, 4.17, 32.5, 1.67, 0.83, 0.0, 3.33, 19.17, 23.33, 4.17, 0.83],
+    categories: all_categories,
+},
+{
+    model: "meta-llama-3.1-8b-instruct",
+    agent: "ReAct",
+    task: "Python",
+    asr: [89.17, 64.17, 22.5, 80.83, 90.0, 58.33, 89.17, 65.0, 27.5, 1.67, 75.0, 88.33, 47.5, 50.0, 16.67, 88.33, 51.67, 91.67, 71.67, 71.67, 66.67, 62.5, 65.83, 59.17, 76.67],
+    rej: [10.83, 31.67, 77.5, 19.17, 7.5, 35.83, 10.83, 33.33, 55.83, 56.67, 20.83, 3.33, 51.67, 50.0, 37.5, 6.67, 29.17, 4.17, 5.83, 11.67, 30.0, 22.5, 31.67, 31.67, 3.33],
+    categories: all_categories,
+},
+{
+    model: "codellama-7b-instruct-hf",
+    agent: "CodeAct",
+    task: "Python",
+    asr: [94.17, 47.5, 81.67, 83.33, 72.5, 61.67, 72.5, 53.33, 24.17, 14.17, 65.0, 75.0, 56.67, 25.0, 36.67, 79.17, 67.5, 50.83, 74.17, 61.67, 60.0, 78.33, 72.5, 69.17, 69.17],
+    rej: [0.0, 1.67, 0.0, 5.0, 6.67, 10.83, 17.5, 45.83, 75.83, 9.17, 0.83, 0.83, 8.33, 51.67, 0.0, 1.67, 1.67, 2.5, 0.0, 0.83, 0.0, 2.5, 5.0, 14.17, 0.0],
+    categories: all_categories,
+},
+{
+    model: "codellama-13b-instruct-hf",
+    agent: "CodeAct",
+    task: "Python",
+    asr: [71.67, 75.83, 92.5, 49.17, 91.67, 90.83, 77.5, 55.83, 23.33, 13.33, 72.5, 88.33, 76.67, 24.17, 55.83, 91.67, 84.17, 90.0, 85.0, 83.33, 74.17, 79.17, 89.17, 77.5, 83.33],
+    rej: [21.67, 7.5, 7.5, 11.67, 6.67, 7.5, 14.17, 41.67, 75.83, 28.33, 0.83, 0.83, 11.67, 51.67, 0.0, 0.0, 1.67, 0.0, 0.0, 0.0, 0.83, 1.67, 0.0, 11.67, 0.0],
+    categories: all_categories,
+},
+{
+    model: "mistral-7b-v0.1*",
+    agent: "CodeAct",
+    task: "Python",
+    asr: [59.17, 72.5, 70.83, 87.5, 87.5, 4.17, 70.0, 57.5, 28.33, 7.5, 69.17, 90.83, 55.83, 68.33, 53.33, 80.83, 60.0, 42.5, 69.17, 50.83, 74.17, 85.0, 75.83, 70.83, 73.33],
+    rej: [0.0, 0.0, 0.0, 0.0, 6.67, 4.17, 15.83, 30.83, 48.33, 4.17, 1.67, 0.0, 10.83, 24.17, 0.83, 1.67, 2.5, 0.0, 0.0, 1.67, 1.67, 1.67, 3.33, 4.17, 0.0],
+    categories: all_categories,
+},
+{
+    model: "llama-2-7b*",
+    agent: "CodeAct",
+    task: "Python",
+    asr: [93.33, 87.5, 99.17, 97.5, 85.83, 70.83, 70.54, 90.83, 85.0, 5.0, 69.17, 83.33, 77.5, 58.33, 36.67, 79.17, 54.17, 43.33, 65.83, 48.33, 65.0, 82.5, 65.0, 72.5, 62.5],
+    rej: [4.17, 2.5, 0.0, 0.83, 7.5, 0.83, 9.82, 3.33, 1.67, 6.67, 2.5, 0.0, 4.17, 15.0, 0.83, 0.83, 3.33, 5.83, 0.0, 3.33, 0.83, 0.0, 4.17, 5.83, 0.0],
+    categories: all_categories,
+},
+{
+    model: "codellama-7b-instruct-hf*",
+    agent: "OCI",
+    task: "Python",
+    asr: [53.33, 51.67, 41.67, 63.33, 46.67, 62.5, 53.33, 25.0, 31.67, 5.0, 26.67, 83.33, 41.67, 0.83, 38.33, 76.67, 39.17, 0.0, 45.0, 40.83, 56.67, 84.17, 77.5, 65.0, 60.0],
+    rej: [16.67, 6.67, 16.67, 15.0, 20.0, 13.33, 24.17, 68.33, 67.5, 44.17, 17.5, 0.83, 17.5, 97.5, 1.67, 9.17, 27.5, 47.5, 0.83, 5.83, 1.67, 1.67, 4.17, 20.0, 0.83],
+    categories: all_categories,
+},
+{
+    model: "codellama-13b-instruct-hf*",
+    agent: "OCI",
+    task: "Python",
+    asr: [60.83, 59.17, 54.17, 81.67, 45.0, 45.83, 45.0, 24.17, 44.17, 4.17, 24.17, 85.0, 36.67, 0.83, 33.33, 78.33, 55.0, 0.0, 62.5, 51.67, 47.5, 83.33, 73.33, 65.83, 65.0],
+    rej: [28.33, 25.0, 35.83, 16.67, 52.5, 39.17, 45.83, 74.17, 55.83, 69.17, 36.67, 0.0, 46.67, 99.17, 4.17, 12.5, 25.0, 49.17, 1.67, 6.67, 4.17, 2.5, 5.83, 15.83, 0.83],
+    categories: all_categories,
+},
+{
+    model: "deepseek-coder-6.7b-instruct*",
+    agent: "OCI",
+    task: "Python",
+    asr: [50.0, 50.0, 52.5, 69.17, 43.33, 66.67, 42.5, 24.17, 25.83, 0.0, 10.0, 54.17, 39.17, 0.0, 49.17, 80.83, 66.67, 0.0, 74.17, 61.67, 47.5, 91.67, 83.33, 67.5, 71.67],
+    rej: [30.0, 1.67, 23.33, 27.5, 51.67, 13.33, 51.67, 75.0, 74.17, 92.5, 55.0, 6.67, 50.0, 100.0, 3.33, 9.17, 19.17, 50.0, 0.83, 6.67, 5.83, 0.83, 0.83, 20.83, 0.0],
     categories: all_categories,
 },
 
@@ -149,7 +187,7 @@ function renderHeatmap(filteredData) {
   clientWidth = container.clientWidth;      
   unitWidth = clientWidth / 800;      
   var svgWidth = 800 * unitWidth; // Maintain width for better label spacing      
-  var svgHeight = 500 * unitWidth;      
+  var svgHeight = 430 * unitWidth;    
   var labelPadding = 270 * unitWidth; // Space for y-axis labels; start x position of the heatmap grids      
   var cellWidth = (svgWidth - labelPadding) / selectedCategories.length - 2.4; // Adjust cell width to fit labels      
   var cellHeight = 20 * unitWidth;      
@@ -201,7 +239,7 @@ function renderHeatmap(filteredData) {
   cells      
     .append("rect")      
     .attr("x", (d, i) => i * cellWidth)      
-    .attr("y", cellHeight + xLabelPadding)      
+    .attr("y", cellHeight)      
     .attr("width", cellWidth - 0 * unitWidth) // Some padding between cells      
     .attr("height", cellHeight)      
     .attr('fill', d => colorScale((d.score / 100).toFixed(1) * 100));  // Apply color scale based on score      
@@ -210,7 +248,7 @@ function renderHeatmap(filteredData) {
   cells      
     .append("text")      
     .attr("x", (d, i) => i * cellWidth + 1 * cellWidth / 2)   // Center text in the middle of the cell      
-    .attr("y", 3 * cellHeight / 2 + xLabelPadding) // Center text vertically in the cell      
+    .attr("y", 3 * cellHeight / 2) // Center text vertically in the cell      
     .attr("dy", `${0.4 * unitWidth}em`) // Vertical alignment for good typographic alignment      
     .attr("text-anchor", "middle") // Center the text horizontally      
     .text((d) => d.score.toFixed(0)) // Round the score to two decimal places      
@@ -326,14 +364,14 @@ xLabels
     .append("text")      
     .attr("class", "y-label")      
     .attr("x", labelXPosition + 60 * unitWidth)      
-    .attr("y", (d, i) => (i + 2.7) * cellHeight + xLabelPadding)      
+    .attr("y", (d, i) => (i + 2.7) * cellHeight)      
     .text((d) => d.model);      
 
   yLabels      
     .append("text")      
     .attr("class", "agent")      
     .attr("x", labelXPosition + 0 * unitWidth) // Offset to display agent next to model name      
-    .attr("y", (d, i) => (i + 2.7) * cellHeight + xLabelPadding)      
+    .attr("y", (d, i) => (i + 2.7) * cellHeight)      
     .text((d) => `${d.agent}`)   
     .style("font-weight", "bold");      
 
@@ -341,7 +379,7 @@ xLabels
     .append("text")      
     .attr("class", "average-score")      
     .attr("x", labelXPosition + 210 * unitWidth) // Offset to display average next to agent      
-    .attr("y", (d, i) => (i + 2.7) * cellHeight + xLabelPadding)      
+    .attr("y", (d, i) => (i + 2.7) * cellHeight)      
     .text((d) => `(Avg: ${d.average.toFixed(0)})`)      
     .style("font-weight", "bold");      
 
