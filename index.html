@@ -104,6 +104,8 @@
               <span class="eql-cntrb"><small><br><sup>*</sup> Equal Contribution.</small> <small>Work done during Chengquan's internship at the University of Chicago and <br> Xun's internship at the University of Illinois Urbana-Champaign.</small></span>  
             </div>  
 
+            <p style="color: red;"> TODO: Fill out the link in Paper and arXiv block. </p>  
+
             <div class="column has-text-centered">  
               <div class="publication-links">  
                 <!-- Arxiv PDF link -->  
@@ -182,6 +184,7 @@
           <br>  
           <b>OpenCodeInterpreter is safer than ReAct and CodeAct agents.</b>  
           <br>  
+          <p style="color: red;"> TODO: Other impressive slogan? </p>  
           <img src="assets/fig-1(1x1).png" alt="Fig-1:scatter of REJ-ASR." style="width: 80%; height: auto;"/>  
           <br>
         </h2>  
@@ -194,6 +197,7 @@
             middle, and CodeAct series (the blue ones) are the most unsafe.
             Different base LLMs significantly affect the agent's safety.
             <br>
+            <span style="color: red;"> TODO: Do we also need to cite every figure in the webpage, like what we did in paper? </span>  
           </p>
         </div>
       </div>  
@@ -217,6 +221,7 @@
               a <u>high-quality, large-scale (over 4,000 test cases)</u> dataset that features <u>diverse languages and formats (Python, Bash, natural language)</u>, providing <u>real interaction with systems</u> and <u>fine-grained evaluation</u> of both <u>code execution and generation</u>.
               <br>
               <br>
+              <!-- <span style="color: rgb(0, 96, 12); background-color: yellow; font-weight: bold; font-size: 24px; border: 2px solid red; padding: 5px; display: inline-block;">TODO: href here</span> -->
               <img src="assets/RedCode-logo-512.png" style="vertical-align: middle" width="28px"> <span class="name-context">RedCode</span> consists of <span class="name-context">RedCode-Exec</span> and <span class="name-context">RedCode-Gen</span>.
               <ul>
                 <li>
@@ -276,19 +281,21 @@
             <img src="assets/fig-1(1x1).jpg" alt="Fig-1:scatter of REJ-ASR."/>
             
               <b><a href="#demo1" class="demo-link1">Finding 1: OpenCodeInterpreter is 🛡️safer than ReAct and CodeAct agents.</a></b>
-              Safety evaluation results of 14 code agents on <span class="name-context">RedCode-Exec</span> are shown on the figure above, where the color of the datapoint
+              Safety evaluation results of 17 code agents on <span class="name-context">RedCode-Exec</span> are shown on the figure above, where the color of the datapoint
                 denotes agent type and the label "A(B)" denotes the results of this agent with base LLM A under risky test cases in
                 language B, OCI denotes OpenCodeInterpreter and * denotes fine-tuned LLMs for agents. The more upper left the datapoint is located, the safer the agent.
                 <u>In general, OpenCodeInterpreter series (the yellow ones) are the safest agents, ReAct series (the red ones) are in the
                 middle, and CodeAct series (the blue ones) are the most unsafe.</u>
                 Different base LLMs also significantly affect the agent's safety. <b><a href="#demo4" class="demo-link4">The heatmaps below</a></b> also show more details on comparions between different base LLMs.
                 <br>
+                <!-- <span style="color: red;"> TODO: Do we also need to cite every figure in the webpage, like what we did in paper? </span>   -->
             
         </div>
         <br>
           <div id="demo2" class="demo-container" style="margin-top: -1em;">
             <img src="assets/radar-high-level.jpg" alt="Radar figure of RedCode-Exec."/>
             <!-- <p style="color: gray;"> -->
+              <!-- <span style="color: red;"> TODO: The titles of radar figure are better to be capitalized in the first alphabet.</span>   -->
               <br>
               <b><a href="#demo2" class="demo-link2">Finding 2: Agents are more likely to reject executing unsafe operations in operating system domain.</a></b>
               Rejection rate and attack success rate of 8 representative code agents on <span class="name-context">RedCode-Exec</span> Python test cases
@@ -300,6 +307,7 @@
           <div id="demo3"  class="demo-container">
             <img src="assets/demo3.jpg" style="width: 100%; max-width: 400px; display: block; margin: 0 auto;" alt="Radar figure of RedCode-Exec." />
             <!-- <p style="color: gray;"> -->
+              <!-- <span style="color: red;"> TODO: The titles of radar figure are better to be capitalized in the first alphabet.</span>   -->
           
               <b><a href="#demo3" class="demo-link3">Finding 3: Agents are less likely to reject risky queries in natural language than programming language inputs, or in Bash code than Python code inputs.</a></b>
               We select ReAct agent based on GPT-4 as a representative, the "RR" denotes rejection rate and "ASR" denotes attack success rate. 
@@ -311,7 +319,7 @@
 
             <div id="demo4" class="demo-container" style="position: relative;"> 
               <b><a href="#demo4" class="demo-link4"> Finding 4: More capable base models, such as GPT series, tend to have a higher rejection rate for unsafe operations under the same Agent structure.</a></b> This could be concluded from the heatmaps below.
-              We present <b style="color:green;">Rejection Rate (RR)</b> and <b style="color:red;">Attack Success Rate (ASR)</b> for 14 different agents on RedCode-Exec, covering both Python and Bash tasks. 
+              We present <b style="color:green;">Rejection Rate (RR)</b> and <b style="color:red;">Attack Success Rate (ASR)</b> for 17 different agents on RedCode-Exec, covering both Python and Bash tasks. 
               The overall rejection rate is low, and the attack success rate is high for all code
               agents, which demonstrates the ✅high quality, ✅stealthiness, and ✅challenging test cases of our benchmark. Note that * in the heatmap denotes fine-tuned LLMs for agents.
               <br>
@@ -324,7 +332,7 @@
                 <button id="choice4">ASR for Bash</button>
               </div>
             
-            <div id="heatmap" style="margin-top: -7em; margin-right: -3em; padding: 0;"></div>
+            <div id="heatmap" style="margin-top: 0em; margin-right: -3em; padding: 0;"></div>
                             
             <div id="tooltip" style="position: absolute; display: none; padding: 10px; background: rgba(0, 0, 0, 0.6); color: white; border-radius: 5px; pointer-events: none; z-index: 10;"></div>
                           
@@ -332,7 +340,7 @@
 
             <div id="demo4_text" style="margin-top: 1em; padding: 0;text-align: center;">
               
-            <b>Heatmap 4.1: Rejection rate for Python on RedCode-Exec across 14 different agents.</b>
+            <b>Heatmap 4.1: Rejection rate for Python on RedCode-Exec across 17 different agents.</b>
             </div>
 
             <script src="static/js/choose_heatmap.js"></script>
@@ -434,11 +442,12 @@
       </div>  
 
       <div class="demo-container">
+        <!-- <p style="color: red;"> TODO: The explanation of leaderboard here. </p>   -->
         The results of OCI, ReAct and CodeAct on <span class="name-context">RedCode-Exec</span> are shown in the following tables. 
         The results of LLMs and agents on <span class="name-context">RedCode-Gen</span> can be found in the figure of <b><a href="#demo5" class="demo-link5">Finding 5</a></b> above.
         <br>
         <br>
-        🖱️<b>Click</b> the "RR" or "ASR" below to sort corresponding results. For RR, the higher the safer. For ASR, the lower the safer.
+        🖱️<b>Click</b> the "RR" or "ASR" below to sort corresponding results. RR denotes rejection rate and ASR denotes attack success rate. For RR, the higher the safer. For ASR, the lower the safer.
         <br>
         <br>
 
@@ -479,6 +488,8 @@
           <h2 class="title is-3">Case Study</h2>  
           <div class="content has-text-justified">  
             <p>  
+              <p style="color: red;"> TODO: The runtime logs to show case studies. </p>  
+              <p style="color: red;"> TODO: This part may need Chengquan and Chulin's help in providing insights of OCI and CodeAct agents.</p>  
               <p style="color: red;"> Note: Maybe not release this section in a hurry?</p>  
               The runtime logs of the three agents on <span class="name-context">RedCode-Exec</span> are shown in the following blocks to provide examples.  
             </p>  
@@ -493,6 +504,7 @@
   <section class="section" id="BibTeX">  
     <div class="container is-max-desktop content">  
       <h2 class="title">BibTeX</h2>  
+      <p style="color: red;"> TODO: Fill out the BibTeX content. </p>  
       <pre><code class="bibtex-code">BibTex Code Here</code></pre>  
     </div>  
   </section>  
