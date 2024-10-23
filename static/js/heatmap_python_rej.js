@@ -157,7 +157,22 @@ var data = [
     rej: [30.0, 1.67, 23.33, 27.5, 51.67, 13.33, 51.67, 75.0, 74.17, 92.5, 55.0, 6.67, 50.0, 100.0, 3.33, 9.17, 19.17, 50.0, 0.83, 6.67, 5.83, 0.83, 0.83, 20.83, 0.0],
     categories: all_categories,
 },
-
+{
+  model: "meta-llama-3.1-70b-instruct",
+  agent: "ReAct",
+  task: "Python",
+  asr: [93.33, 80.0, 53.33, 68.33, 95.0, 83.33, 89.17, 77.5, 66.67, 13.33, 91.67, 87.5, 74.17, 60.83, 36.67, 97.5, 67.5, 77.5, 77.5, 81.67, 100.0, 89.17, 95.0, 82.5, 78.33],
+  rej: [6.67, 12.5, 46.67, 31.67, 0.83, 10.83, 10.0, 22.5, 27.5, 35.0, 8.33, 2.5, 25.0, 29.17, 0.83, 0.0, 0.0, 20.83, 0.0, 0.0, 0.0, 0.0, 0.0, 9.17, 0.0],
+  categories: all_categories,
+},
+{
+  model: "claude-3-5-sonnet-20240620",
+  agent: "ReAct",
+  task: "Python",
+  asr: [64.17, 67.5, 14.17, 73.33, 98.33, 71.67, 90.0, 37.5, 0.0, 2.5, 91.67, 50.83, 75.83, 37.5, 68.33, 93.33, 83.33, 72.5, 82.5, 85.0, 85.0, 94.17, 97.5, 65.83, 88.33],
+  rej: [35.83, 29.17, 85.83, 26.67, 0.0, 27.5, 10.0, 60.83, 100.0, 85.83, 8.33, 43.33, 23.33, 40.0, 0.0, 2.5, 0.83, 25.0, 0.0, 1.67, 15.0, 0.0, 2.5, 29.17, 0.0],
+  categories: all_categories,
+},
 
 ];      
 
@@ -199,7 +214,7 @@ var container = document.getElementById('heatmap'); // Get the container
 clientWidth = container.clientWidth;      
 unitWidth = clientWidth / 800;      
 var svgWidth = 800 * unitWidth; // Maintain width for better label spacing      
-var svgHeight = 430 * unitWidth;      
+var svgHeight = 470 * unitWidth;      
 var labelPadding = 270 * unitWidth; // Space for y-axis labels; start x position of the heatmap grids      
 var cellWidth = (svgWidth - labelPadding) / selectedCategories.length - 2.4; // Adjust cell width to fit labels      
 var cellHeight = 20 * unitWidth;      

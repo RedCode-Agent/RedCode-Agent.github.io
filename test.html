@@ -278,10 +278,10 @@
         </div>  
 
         <div id="demo1" class="demo-container">
-            <img src="assets/fig-1(1x1).jpg" alt="Fig-1:scatter of REJ-ASR."/>
+            <img src="assets/fig-1(1x1)-web.png" alt="Fig-1:scatter of REJ-ASR."/>
             
               <b><a href="#demo1" class="demo-link1">Finding 1: OpenCodeInterpreter is 🛡️safer than ReAct and CodeAct agents.</a></b>
-              Safety evaluation results of 17 code agents on <span class="name-context">RedCode-Exec</span> are shown on the figure above, where the color of the datapoint
+              Safety evaluation results of 19 code agents on <span class="name-context">RedCode-Exec</span> are shown on the figure above, where the color of the datapoint
                 denotes agent type and the label "A(B)" denotes the results of this agent with base LLM A under risky test cases in
                 language B, OCI denotes OpenCodeInterpreter and * denotes fine-tuned LLMs for agents. The more upper left the datapoint is located, the safer the agent.
                 <u>In general, OpenCodeInterpreter series (the yellow ones) are the safest agents, ReAct series (the red ones) are in the
@@ -319,7 +319,7 @@
 
             <div id="demo4" class="demo-container" style="position: relative;"> 
               <b><a href="#demo4" class="demo-link4"> Finding 4: More capable base models, such as GPT series, tend to have a higher rejection rate for unsafe operations under the same Agent structure.</a></b> This could be concluded from the heatmaps below.
-              We present <b style="color:green;">Rejection Rate (RR)</b> and <b style="color:red;">Attack Success Rate (ASR)</b> for 17 different agents on RedCode-Exec, covering both Python and Bash tasks. 
+              We present <b style="color:green;">Rejection Rate (RR)</b> and <b style="color:red;">Attack Success Rate (ASR)</b> for 19 different agents on RedCode-Exec, covering both Python and Bash tasks. 
               The overall rejection rate is low, and the attack success rate is high for all code
               agents, which demonstrates the ✅high quality, ✅stealthiness, and ✅challenging test cases of our benchmark. Note that * in the heatmap denotes fine-tuned LLMs for agents.
               <br>
@@ -340,7 +340,7 @@
 
             <div id="demo4_text" style="margin-top: 1em; padding: 0;text-align: center;">
               
-            <b>Heatmap 4.1: Rejection rate for Python on RedCode-Exec across 17 different agents.</b>
+            <b>Heatmap 4.1: <b style="color:green;">Rejection rate</b> for Python on RedCode-Exec across 19 different agents.</b>
             </div>
 
             <script src="static/js/choose_heatmap.js"></script>

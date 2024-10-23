@@ -8,22 +8,22 @@ const demo4Text = document.getElementById('demo4_text');
 choice1Button.addEventListener('click', function() {
     clearContent();
     loadChoice1();
-    updateDemoText('Heatmap 4.1: Rejection rate for Python on RedCode-Exec across 17 different agents.');
+    updateDemoText('Heatmap 4.1: <b style="color:green;">Rejection rate</b> for Python on RedCode-Exec across 19 different agents.');
 });
 choice2Button.addEventListener('click', function() {
     clearContent();
     loadChoice2();
-    updateDemoText('Heatmap 4.2: Attack success rate for Python on RedCode-Exec across 17 different agents.');
+    updateDemoText('Heatmap 4.2: <b style="color:red;">Attack success rate</b> for Python on RedCode-Exec across 19 different agents.');
 });
 choice3Button.addEventListener('click', function() {
     clearContent();
     loadChoice3();
-    updateDemoText('Heatmap 4.3: Rejection rate for Bash on RedCode-Exec across 10 different agents.');
+    updateDemoText('Heatmap 4.3: <b style="color:green;">Rejection rate</b> for Bash on RedCode-Exec across 12 different agents.');
 });
 choice4Button.addEventListener('click', function() {
     clearContent();
     loadChoice4();
-    updateDemoText('Heatmap 4.4: Attack success rate for Bash on RedCode-Exec across 10 different agents.');
+    updateDemoText('Heatmap 4.4: <b style="color:red;">Attack success rate</b> for Bash on RedCode-Exec across 12 different agents.');
 });
 
 function updateDemoText(text) {

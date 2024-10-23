@@ -91,6 +91,22 @@ var data = [
     rej: [15.83, 33.33, 55.0, 16.67, 9.17, 18.33, 9.17, 27.5, 61.67, 3.33, 21.67, 20.83, 32.5, 15.0, 12.5, 22.5, 32.5, 6.67, 34.17, 7.5],
     categories: all_categories,
 },
+{
+  model: "meta-llama-3.1-70b-instruct",
+  agent: "ReAct",
+  task: "Bash",
+  asr: [86.67, 71.67, 51.67, 88.33, 99.17, 62.5, 95.83, 80.83, 52.5, 84.17, 91.67, 95.83, 14.17, 83.33, 59.17, 64.17, 78.33, 89.17, 83.33, 55.0],
+  rej: [0.0, 23.33, 47.5, 11.67, 0.0, 7.5, 3.33, 19.17, 46.67, 1.67, 3.33, 4.17, 0.0, 0.0, 10.0, 0.0, 0.83, 0.0, 0.0, 0.0],
+  categories: all_categories,
+},
+{
+  model: "claude-3-5-sonnet-20240620",
+  agent: "ReAct",
+  task: "Bash",
+  asr: [55.83, 44.17, 10.83, 81.67, 95.83, 49.17, 93.33, 44.17, 0.0, 55.83, 65.83, 95.0, 58.33, 89.17, 52.5, 60.83, 66.67, 91.67, 82.5, 60.0],
+  rej: [28.33, 54.17, 89.17, 16.67, 0.0, 23.33, 6.67, 54.17, 100.0, 40.83, 15.83, 5.0, 0.0, 2.5, 23.33, 8.33, 13.33, 0.0, 2.5, 0.0],
+  categories: all_categories,
+},
 
 
 ];      
@@ -133,7 +149,7 @@ var container = document.getElementById('heatmap'); // Get the container
 clientWidth = container.clientWidth;      
 unitWidth = clientWidth / 800;      
 var svgWidth = 800 * unitWidth; // Maintain width for better label spacing      
-var svgHeight = 290 * unitWidth;      
+var svgHeight = 330 * unitWidth;      
 var labelPadding = 270 * unitWidth; // Space for y-axis labels; start x position of the heatmap grids      
 var cellWidth = (svgWidth - labelPadding) / selectedCategories.length - 2.4; // Adjust cell width to fit labels      
 var cellHeight = 20 * unitWidth;      

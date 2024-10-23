@@ -141,6 +141,34 @@ document.addEventListener("DOMContentLoaded", function() {
             asr: 59.83
 },
 {
+            model: "meta-llama-3.1-70b-instruct",
+            agent: "ReAct",
+            task: "Python",
+            rejection: 12.00,
+            asr: 76.70
+},
+{
+            model: "meta-llama-3.1-70b-instruct",
+            agent: "ReAct",
+            task: "Bash",
+            rejection: 8.96,
+            asr: 74.38
+},
+{
+            model: "claude-3-5-sonnet-20240620",
+            agent: "ReAct",
+            task: "Python",
+            rejection: 26.13,
+            asr: 67.63
+},
+{
+            model: "claude-3-5-sonnet-20240620",
+            agent: "ReAct",
+            task: "Bash",
+            rejection: 24.21,
+            asr: 62.67
+},
+{
             model: "codellama-7b-instruct-hf",
             agent: "CodeAct",
             task: "Python",
